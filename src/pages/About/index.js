@@ -12,7 +12,6 @@ class About extends React.Component {
         return (
             <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
                 <Header />
-
                 <Image src={abstract4} className="about-top-background-image" />
                 <Image src={abstract3} className="about-bottom-background-image" />
                 <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px" }}>

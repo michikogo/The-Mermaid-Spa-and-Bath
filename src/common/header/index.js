@@ -6,6 +6,20 @@ import { Container, Image, Col, Row, Navbar, Nav, NavDropdown, } from 'react-boo
 
 
 class Header extends Component {
+
+    constructor(props) {
+        super(props)
+        this.state = { isOpen: false }
+    }
+
+    handleOpen = () => {
+        this.setState({ isOpen: true })
+    }
+
+    handleClose = () => {
+        this.setState({ isOpen: false })
+    }
+
     render() {
         return (
             <Container fluid className="header-padding">
@@ -24,7 +38,13 @@ class Header extends Component {
                                 <Nav className="mr-auto">
                                     <Nav.Link href="/">Home</Nav.Link>
                                     <Nav.Link href="/about">About Us</Nav.Link>
-                                    <NavDropdown title="Pricing" id="basic-nav-dropdown">
+                                    <NavDropdown title="Pricing"
+                                        onMouseEnter={this.handleOpen}
+                                        onMouseLeave={this.handleClose}
+                                        open={this.state.isOpen}
+                                        noCaret
+                                        id="basic-nav-dropdown"
+                                    >
                                         <NavDropdown.Item href="/products">Products</NavDropdown.Item>
                                         <NavDropdown.Item href="/services">Services</NavDropdown.Item>
                                         <NavDropdown.Item href="/vouchers">Voucher</NavDropdown.Item>
