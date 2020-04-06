@@ -1,0 +1,25 @@
+.about-title-style{
+    text-align: center;
+    padding-top: 50px;
+    font-size: -webkit-xxx-large;
+    font-weight: 500;
+}
+.about-bottom-background-image{
+    position: absolute;
+    padding-top: 510px;
+}
+.about-top-background-image{
+    position: absolute;
+    padding-left: 850px;
+    height: 730px;
+}
+.about-col-align{
+    align-self: center;
+}
+.about-description-style{
+    text-align: justify;
+}
+
+.about-picture-scale{
+    width: inherit;
+}
