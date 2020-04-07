@@ -1,0 +1,20 @@
+.specific-product-title{
+    font-size: xx-large;
+    margin-bottom: 0px;
+    font-style: italic;
+}
+.specific-product-brand{
+    margin: 0px;
+    font-weight: bold;
+}
+
+.specific-product-price{
+    color: #343a40;
+    padding-top: 40px;
+    font-size: xx-large;
+}
+
+.specific-product-quantity-title{
+    font-size: large;
+    font-weight: 500;
+}
