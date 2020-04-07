@@ -4,3 +4,30 @@
     font-size: -webkit-xxx-large;
     font-weight: 500;
 }
+
+/* So that the same size with other cards */
+.cards-samesize{
+    display: flex;
+    flex-direction: row;
+}
+
+.products-card{
+    padding-top: 10px;
+    /* So that same size with other cards */
+    flex: 1; 
+    transition: .4s;
+}
+
+/* Shaddow effect at the back of the card */
+.products-card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.products-card-title{
+    font-size: medium;
+    color: black;
+}
+.products-card-price{
+    text-align: right;
+    color: blue;
+}
