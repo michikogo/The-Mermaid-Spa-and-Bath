@@ -29,15 +29,19 @@ import product7 from "../image/product7.jpg";
 import product8 from "../image/product8.jpg";
 import product9 from "../image/product9.jpg";
 import product10 from "../image/product10.jpg";
+import abstract6Forground from "../image/abstract6.1.png";
+import abstract6Background from "../image/abstract6.2.png";
 
 // Product Specific
 import check from "../image/check.jpg"
+
+
 export {
     logo,
     spa1, spa2, spa3, spa4,
     products, staff, reservation,
     about, about2,
-    abstract3, abstract4, abstract5, abstract5Flip,
+    abstract3, abstract4, abstract5, abstract5Flip, abstract6Forground, abstract6Background,
     product1, product2, product3, product4, product5, product6, product7, product8, product9, product10,
     check,
 }
