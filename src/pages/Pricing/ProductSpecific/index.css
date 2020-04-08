@@ -18,3 +18,14 @@
     font-size: large;
     font-weight: 500;
 }
+
+.specific-product-toast{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border-radius: 15px;
+}
+
+.specific-product-logo{
+    width: 30px;
+}

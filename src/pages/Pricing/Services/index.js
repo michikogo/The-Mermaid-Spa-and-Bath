@@ -7,14 +7,15 @@ import { check } from '../../../image';
 import Header from '../../../common/header';
 import Footer from '../../../common/footer';
 
-
 const Services = props => {
     return (
         <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
             <Header />
             <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px", paddingTop: "50px" }}>
                 <Row>
-                    Hello from Services
+                    <p style={{ fontStyle: "Italic", fontSize: "x-large" }}>Facial Treatments</p>
+                    <p></p>
+
                 </Row>
             </Container>
             <Footer />
@@ -22,4 +23,5 @@ const Services = props => {
     );
 }
 
+// Source: https://www.leaf.tv/articles/different-types-of-spa-treatments/
 export default Services;

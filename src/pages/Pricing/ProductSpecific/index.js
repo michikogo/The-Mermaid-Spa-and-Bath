@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Col, Row, Image, InputGroup, DropdownButton, Dropdown, Button, Card, Tabs, Tab, ListGroup } from 'react-bootstrap';
-import { check } from '../../../image';
+import { Container, Col, Row, Image, InputGroup, DropdownButton, Dropdown, Button, Card, Tabs, Tab, ListGroup, Toast } from 'react-bootstrap';
+import { check, logo } from '../../../image';
 
 import Header from '../../../common/header';
 import Footer from '../../../common/footer';
@@ -44,6 +44,9 @@ const ProductSpecific = props => {
         { name: "Cash on Delivery" }
     ]);
 
+    const [addToCart, setAddToCart] = useState(false);
+
+
     return (
         <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
             <Header />
@@ -55,9 +58,11 @@ const ProductSpecific = props => {
                     The description is {props.location.state.desc}
                 </p> */}
                 <Row>
+                    {/* PRODUCT IMAGE */}
                     <Col sm={5}>
                         <Image src={props.location.state.image} style={{ width: "inherit" }} />
                     </Col>
+                    {/* PRODUCT DESCRIPTION */}
                     <Col>
                         <Row>
                             <p className="specific-product-title">{props.location.state.name}</p>
@@ -74,7 +79,14 @@ const ProductSpecific = props => {
                                     ? props.location.state.pros.map((data, i) => {
                                         return (
                                             <div>
-                                                <ListGroup.Item key={i}>🎉 {data}</ListGroup.Item>
+                                                <Row>
+                                                    <Col lg={1} style={{ padding: "0px", textAlign: "end" }}>
+                                                        <span>🎉</span>
+                                                    </Col>
+                                                    <Col style={{ padding: "0px" }}>
+                                                        <ListGroup.Item style={{ fontSize: "medium", padding: "0px 0px 0px 15px" }} key={i}>{data}</ListGroup.Item>
+                                                    </Col>
+                                                </Row>
                                             </div>
                                         );
                                     })
@@ -88,6 +100,7 @@ const ProductSpecific = props => {
                         <Row>
                             <p className="specific-product-quantity-title">Quantity</p>
                         </Row>
+                        {/* DROPDOWN OPTION OF HOW MANY ITEMS */}
                         <Row>
                             <Col lg={1}>
                                 <div style={{ borderRadius: "10px" }}>
@@ -105,13 +118,25 @@ const ProductSpecific = props => {
                                     </DropdownButton>
                                 </div>
                             </Col>
-                            <Col sm={4} style={{ display: "grid" }}>
+                            {/* BUTTON TO ADD TO CART OR BUY */}
+                            <Col lg={3} style={{ display: "grid" }}>
                                 <Button variant="success">Buy Now</Button>
                             </Col>
-                            <Col sm={4} style={{ display: "grid" }}>
-                                <Button variant="primary">Add to Cart</Button>
+                            <Col lg={3} style={{ display: "grid" }}>
+                                <Button variant="primary" onClick={() => setAddToCart(true)}>Add to Cart</Button>
+                            </Col>
+                            {/* POPUP (TOAST) WHEN ADD TO CART IS CLICKED */}
+                            <Col lg={5}>
+                                <Toast onClose={() => setAddToCart(false)} show={addToCart} delay={5000} autohide className="specific-product-toast">
+                                    <Toast.Header>
+                                        <img src={logo} className="rounded mr-2 specific-product-logo" alt="" />
+                                        <strong className="mr-auto">The Mermaid Spa and Bath </strong>
+                                    </Toast.Header>
+                                    <Toast.Body>{props.location.state.name} is added to cart</Toast.Body>
+                                </Toast>
                             </Col>
                         </Row>
+                        {/* PAYMENT DETAILS */}
                         <Row>
                             <p style={{ paddingTop: "20px" }}>Payment options available:</p>
                         </Row>
@@ -131,7 +156,8 @@ const ProductSpecific = props => {
                         </Row>
                     </Col>
                 </Row>
-                <Row style={{ width: "101%", margin: "0px", paddingTop: "15px" }}>
+                {/* MORE DETAILS OF THE ITEM */}
+                <Row style={{ width: "101%", margin: "0px", paddingTop: "30px", paddingBottom: "30px" }}>
                     <Card style={{ marginTop: "10px", padding: "30px", width: "100%" }}>
                         <Tabs fill defaultActiveKey="home" id="uncontrolled-tab-example">
                             <Tab eventKey="home" title="What to Love">
