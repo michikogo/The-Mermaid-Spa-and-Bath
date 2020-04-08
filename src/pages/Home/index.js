@@ -38,7 +38,7 @@ class Home extends Component {
                             {ppt !== ''
                                 ? ppt.map((data, i) => {
                                     return (
-                                        <Carousel.Item>
+                                        <Carousel.Item key={i}>
                                             <div className="carousel-container">
                                                 <img
                                                     className="home-images-size"
@@ -64,7 +64,7 @@ class Home extends Component {
                         {details !== ''
                             ? details.map((data, i) => {
                                 return (
-                                    <Col sm={4}>
+                                    <Col sm={4} key={i}>
                                         <div className="home-offerings-overlay-image">
                                             <Image src={data.name} className="home-offerings-image" />
                                             <div className="home-offerings-normal">

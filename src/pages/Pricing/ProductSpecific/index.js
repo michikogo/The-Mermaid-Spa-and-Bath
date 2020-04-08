@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Col, Row, Image, InputGroup, DropdownButton, Dropdown, Button, Card, Tabs, Tab, ListGroup } from 'react-bootstrap';
@@ -73,7 +73,9 @@ const ProductSpecific = props => {
                                 {props.location.state.pros !== ''
                                     ? props.location.state.pros.map((data, i) => {
                                         return (
-                                            <ListGroup.Item key={i}>🎉 {data}</ListGroup.Item>
+                                            <div>
+                                                <ListGroup.Item key={i}>🎉 {data}</ListGroup.Item>
+                                            </div>
                                         );
                                     })
                                     : "No Data"
@@ -118,7 +120,7 @@ const ProductSpecific = props => {
                                 ? paymentOptions.map((data, i) => {
                                     return (
                                         <div>
-                                            <Col>
+                                            <Col key={i}>
                                                 <Image src={check} style={{ width: "25px" }} /> {data.name}
                                             </Col>
                                         </div>
