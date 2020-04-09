@@ -48,9 +48,9 @@ const ProductSpecific = props => {
 
 
     return (
-        <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
+        <Container fluid className="specific-product-header-padding">
             <Header />
-            <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px", paddingTop: "50px" }}>
+            <Container fluid className="specific-product-content-padding">
                 {/* <p>
                     The name of the product is {props.location.state.name}
                     The price is {props.location.state.price}
@@ -59,10 +59,10 @@ const ProductSpecific = props => {
                 </p> */}
                 <Row>
                     {/* PRODUCT IMAGE */}
-                    <Col sm={5}>
-                        <Image src={props.location.state.image} style={{ width: "inherit" }} />
+                    <Col sm={5} className="specific-product-image-div">
+                        <Image src={props.location.state.image} className="specific-product-image" />
                     </Col>
-                    {/* PRODUCT DESCRIPTION */}
+                    {/* PRODUCT DETAILS */}
                     <Col>
                         <Row>
                             <p className="specific-product-title">{props.location.state.name}</p>
@@ -71,7 +71,7 @@ const ProductSpecific = props => {
                             <p className="specific-product-brand">The Body Shop</p>
                         </Row>
                         <Row>
-                            <p style={{ paddingTop: "20px" }}>{props.location.state.desc}</p>
+                            <p className="specific-product-desc">{props.location.state.desc}</p>
                         </Row>
                         <Row>
                             <ListGroup variant="flush">
@@ -80,11 +80,11 @@ const ProductSpecific = props => {
                                         return (
                                             <div>
                                                 <Row>
-                                                    <Col lg={1} style={{ padding: "0px", textAlign: "end" }}>
+                                                    <Col lg={1} className="specific-product-emoji">
                                                         <span>🎉</span>
                                                     </Col>
-                                                    <Col style={{ padding: "0px" }}>
-                                                        <ListGroup.Item style={{ fontSize: "medium", padding: "0px 0px 0px 15px" }} key={i}>{data}</ListGroup.Item>
+                                                    <Col className="specific-product-benefits-div">
+                                                        <ListGroup.Item className="specific-product-benefits" key={i}>{data}</ListGroup.Item>
                                                     </Col>
                                                 </Row>
                                             </div>
@@ -103,7 +103,7 @@ const ProductSpecific = props => {
                         {/* DROPDOWN OPTION OF HOW MANY ITEMS */}
                         <Row>
                             <Col lg={1}>
-                                <div style={{ borderRadius: "10px" }}>
+                                <div className="specific-product-dropdown">
                                     <DropdownButton
                                         as={InputGroup.Prepend}
                                         variant="outline-secondary"
@@ -119,10 +119,10 @@ const ProductSpecific = props => {
                                 </div>
                             </Col>
                             {/* BUTTON TO ADD TO CART OR BUY */}
-                            <Col lg={3} style={{ display: "grid" }}>
+                            <Col lg={3} className="specific-product-add-buy">
                                 <Button variant="success">Buy Now</Button>
                             </Col>
-                            <Col lg={3} style={{ display: "grid" }}>
+                            <Col lg={3} className="specific-product-add-buy">
                                 <Button variant="primary" onClick={() => setAddToCart(true)}>Add to Cart</Button>
                             </Col>
                             {/* POPUP (TOAST) WHEN ADD TO CART IS CLICKED */}
@@ -138,7 +138,7 @@ const ProductSpecific = props => {
                         </Row>
                         {/* PAYMENT DETAILS */}
                         <Row>
-                            <p style={{ paddingTop: "20px" }}>Payment options available:</p>
+                            <p className="specific-product-payment">Payment options available:</p>
                         </Row>
                         <Row>
                             {paymentOptions !== ''
@@ -146,7 +146,7 @@ const ProductSpecific = props => {
                                     return (
                                         <div>
                                             <Col key={i}>
-                                                <Image src={check} style={{ width: "25px" }} /> {data.name}
+                                                <Image src={check} className="specific-product-payment-options" /> {data.name}
                                             </Col>
                                         </div>
                                     );
@@ -157,17 +157,17 @@ const ProductSpecific = props => {
                     </Col>
                 </Row>
                 {/* MORE DETAILS OF THE ITEM */}
-                <Row style={{ width: "101%", margin: "0px", paddingTop: "30px", paddingBottom: "30px" }}>
-                    <Card style={{ marginTop: "10px", padding: "30px", width: "100%" }}>
+                <Row className="specific-product-more-details">
+                    <Card className="specific-product-more-details-card">
                         <Tabs fill defaultActiveKey="home" id="uncontrolled-tab-example">
                             <Tab eventKey="home" title="What to Love">
-                                <p style={{ paddingTop: "50px" }}>{props.location.state.whatToLove}</p>
+                                <p className="specific-product-more-details-tab">{props.location.state.whatToLove}</p>
                             </Tab>
                             <Tab eventKey="profile" title="How To Use">
-                                <p style={{ paddingTop: "50px" }}>{props.location.state.howToUse}</p>
+                                <p className="specific-product-more-details-tab">{props.location.state.howToUse}</p>
                             </Tab>
                             <Tab eventKey="contact" title="Ingredients">
-                                <p style={{ paddingTop: "50px" }}>{props.location.state.ingredients}</p>
+                                <p className="specific-product-more-details-tab">{props.location.state.ingredients}</p>
                             </Tab>
                         </Tabs>
                     </Card>

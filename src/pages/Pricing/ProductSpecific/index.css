@@ -1,3 +1,22 @@
+ .specific-product-header-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+ }
+
+ /* CONTENT */
+ .specific-product-content-padding{
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+ }
+/* IMAGE */
+.specific-product-image-div{
+  padding-top: 50px;
+}
+.specific-product-image{
+    width: inherit;
+}
+/* PRODUCT DETAILS */
 .specific-product-title{
     font-size: xx-large;
     margin-bottom: 0px;
@@ -7,25 +26,65 @@
     margin: 0px;
     font-weight: bold;
 }
-
+.specific-product-desc{
+    padding-top: 20px;
+}
+.specific-product-emoji{
+    padding: 0px;
+    text-align: end;
+}
+.specific-product-benefits-div{
+    padding: 0px;
+}
+.specific-product-benefits{
+    font-size: medium;
+    padding: 0px 0px 0px 15px; 
+}
 .specific-product-price{
     color: #343a40;
     padding-top: 40px;
     font-size: xx-large;
 }
-
 .specific-product-quantity-title{
     font-size: large;
     font-weight: 500;
 }
-
+.specific-product-dropdown{
+    border-radius: 10px;
+}
+/* BUTTON FOR ADD TO CART AND BUY */
+.specific-product-add-buy{
+    display: grid;
+}
 .specific-product-toast{
     position: fixed;
     top: 15px;
     right: 15px;
     border-radius: 15px;
 }
-
 .specific-product-logo{
     width: 30px;
+}
+/* PAYMENT DETAILS */
+.specific-product-payment-options{
+    
+    width: 25px;
+}
+.specific-product-payment{
+    padding-top: 20px;
+}
+/* MORE DETAILS */
+.specific-product-more-details{
+    width: 101%;
+    margin: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px; 
+}
+.specific-product-more-details-card{
+    margin-top: 10px;
+    padding: 30px;
+    width: 100%;
+}
+.specific-product-more-details-tab{
+    padding-top: 50px;
 }
