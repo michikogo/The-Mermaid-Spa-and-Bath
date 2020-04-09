@@ -1,9 +1,17 @@
- .treatments-title-style{
-    text-align: center;
+.treatments-header-padding{
+  padding-left: 0px;
+  padding-right: 0px; 
+}
+ .treatments-content-padding{
+  padding-left: 150px;
+  padding-right: 150px;
+ }
+.treatments-title-style{
+  text-align: center;
     padding-top: 50px;
     font-size: -webkit-xxx-large;
     font-weight: 500;
- }
+}
 
  .treatments-image-forground{
    position: absolute;

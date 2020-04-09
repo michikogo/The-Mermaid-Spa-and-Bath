@@ -5,6 +5,7 @@ import { Container, Tab, Tabs, Table } from 'react-bootstrap';
 
 import Header from '../../../common/header';
 import Footer from '../../../common/footer';
+import TreatmentsTable from './treatmentsTable.js';
 
 const Treatments = props => {
     const [facialTreatments, setFacialTreatments] = useState([
@@ -22,48 +23,48 @@ const Treatments = props => {
         { name: "Oil Control Advanced with Rejuvelite", desc: "Visibly unclogs pores from skin impurities while controlling oil production and boosting the skin’s natural healing process.", price: "P 1 800" },
         { name: "RG Advance with Rejuvelite", desc: "   Minimizes pores, reduces oil effectively restores the skin's natural balance using a charcoal mask and LED color therapy.", price: "P 1 800" },
     ])
+
+    const [bodyTreatments, setBodyTreatments] = useState([
+        { name: "Back Cleaning", desc: "This deep moisturizing and clarifying treatment makes the skin on your back supple as it eliminates bacne problems, blackheads, ingrown hairs, and oily deposits. It also lightens the complexion and gives the skin a healthy glow.", price: "P 850" },
+        { name: "Nano RF", desc: "Uses radio frequency applied on the skin to lift, contour and tone problem areas. Also stimulates the production of collagen, resulting to a smoother and tighter skin.", price: "P 1 200" },
+        { name: "Body Scrub", desc: "Removes dead, dry and rough skin. Evens out skin tone and texture.", price: "P 2 200" },
+        { name: "Shape & Sculpt", desc: "Flawless’ premier non-invasive and pain free slimming solution that reduces fat, tones up muscles, and contours the body. It uses a synergistic system of cavitation ultrasound, radio frequency, and interference muscle toning to slim down and tone the face, arms, abdomen, hips, thighs, and legs. Results visible in just one session.", price: "P 1 000" },
+        { name: "Cellutite", desc: "Uses the combined technology of radio frequency, infrared waves and vacuum and mechanical massage to firm up specific areas of the body and to reduce cellulite.", price: "P 1 400" },
+        { name: "Mesolipo", desc: "Melts fatty tissues and tightens loose skin by injecting a concoction of slimming agents, such as L-Carnitine and phosphatidlycholine, into problem areas.", price: "P 5 500" },
+        { name: "Sweatox", desc: "Uses small amounts of botulinum toxin to significantly reduce sweating by temporarily blocking signals that stimulates the sweat glands.", price: "P 7 200" },
+    ])
+
+    const [peel, setPeel] = useState([
+        { name: "Skin Peel", desc: "Uses a solution to exfoliate dull skin and lighten pigmentations, revealing a more youthful and radiant skin.", price: "P 770" },
+        { name: "Mesoestetic Peel", desc: "Exfoliates skin to address specific skin concerns. Depending on solution used (Mandelic, Glycolic, Lactic), this peeling treatment ca help dry out acne and decrease oiliness of the skin, rejuvenate skin and reduce appearance of fine lines, and lighten dull and uneven skin.", price: "P 1 700" },
+        { name: "Easy Peel", desc: "Using a highly concentrated peeling solution, Easy Peel effectively heats and eliminates skin discoloration, fine lines, acne, oilness, and the appearance of large pores.", price: "P 3 500" },
+        { name: "Flawless Signature Body Peel", desc: "A Flawless Exclusive, this intensive whole body micro peeling treatment uses multiple types of fruit acids to deliver a smoother, fairer and more radiant skin.", price: "P 4 500" }
+    ])
+
+    const [microdermabrasion, setMicrodermabrasion] = useState([
+        { name: "Platinum Peel", desc: "Promotes skin renewal by removing dead skin cells using a diamond-tip wand, resulting to a lighter, cleaner, and more radiant skin. (For best results: Add Advanced Whitening/Oil Control/Age Defy/Cell Booster Infusion Mask)", price: "P 940" },
+        { name: "Nano Powerpeel (Neck/Nape/Underarms/Scars)", desc: "Propels corundum crystals onto the skin to slough off dead skin cells to rejuvenate, lighten, and even out skin tone. It also helps reduce the appearance of certain types of scars.", price: "P 1 100" },
+        { name: "Power Facial", desc: "Ideal for those with sensitive skin, this innovative facial treatment effectively rejuvenates the skin and improves damages caused by the sun. It combines abrasion and vacuum while adding nutrient-rich and hydrating serums to exfoliate the outer layer of the skin.", price: "P 5500" }
+    ])
+
+
     return (
-        <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
+        <Container fluid className="treatments-header-padding">
             <Header />
             <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px" }}>
                 <p className="treatments-title-style">Treatments</p>
                 <Tabs fill defaultActiveKey="0" id="uncontrolled-tab-example">
                     <Tab eventKey="0" title="Facial Treatments" style={{ paddingTop: "30px" }}>
-                        <Table responsive>
-                            <thead>
-                                <tr>
-                                    <th style={{ fontSize: "x-large" }}>Facial</th>
-                                    <th style={{ fontSize: "x-large" }}>Price</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody >
-                                {facialTreatments !== ''
-                                    ? facialTreatments.map((data, i) => {
-                                        return (
-                                            <tr>
-                                                <td style={{ width: "1000px" }}><p style={{ fontStyle: "italic", fontWeight: "500", marginBottom: "5px" }}>{data.name}</p> <p style={{ marginBottom: "5px" }}>{data.desc}</p></td>
-                                                <td>{data.price}</td>
-                                                <td>Book now</td>
-                                            </tr>
-                                        );
-                                    })
-                                    : 'No Data'
-                                }
-                            </tbody>
-                        </Table>
+                        <TreatmentsTable data={facialTreatments} />
                     </Tab>
                     <Tab eventKey="1" title="Body Treatments" style={{ paddingTop: "30px" }}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        <hr />
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
+                        <TreatmentsTable data={bodyTreatments} />
                     </Tab>
-                    <Tab eventKey="2" title="Massages" style={{ paddingTop: "30px" }}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <Tab eventKey="2" title="Peels" style={{ paddingTop: "30px" }}>
+                        <TreatmentsTable data={peel} />
                     </Tab>
-                    <Tab eventKey="3" title="Nail Treatments" style={{ paddingTop: "30px" }}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <Tab eventKey="3" title="Microdermabrasion" style={{ paddingTop: "30px" }}>
+                        <TreatmentsTable data={microdermabrasion} />
                     </Tab>
                 </Tabs>
             </Container>
@@ -72,5 +73,5 @@ const Treatments = props => {
     );
 }
 
-// Source: https://www.leaf.tv/articles/different-types-of-spa-treatments/
+
 export default Treatments;
