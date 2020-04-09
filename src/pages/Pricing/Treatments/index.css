@@ -1,0 +1,12 @@
+ .treatments-title-style{
+    text-align: center;
+    padding-top: 50px;
+    font-size: -webkit-xxx-large;
+    font-weight: 500;
+ }
+
+ .treatments-image-forground{
+   position: absolute;
+   width: 1500px;
+   height: 300px;
+ }

@@ -60,7 +60,7 @@ class Home extends Component {
                         </Carousel>
                     </Row>
                     <br />
-                    <Row>
+                    <Row style={{ paddingBottom: "30px" }}>
                         {details !== ''
                             ? details.map((data, i) => {
                                 return (

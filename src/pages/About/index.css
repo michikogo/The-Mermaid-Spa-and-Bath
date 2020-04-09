@@ -6,12 +6,13 @@
 }
 .about-bottom-background-image{
     position: absolute;
-    padding-top: 510px;
+    /* padding-top: 510px; */
+    bottom: -20px;
+    z-index: -1;
 }
 .about-top-background-image{
-    position: absolute;
-    padding-left: 850px;
     height: 730px;
+    float: right;
 }
 .about-col-align{
     align-self: center;

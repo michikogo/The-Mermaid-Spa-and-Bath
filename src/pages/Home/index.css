@@ -6,15 +6,19 @@
     display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .home-background-left{
     position: absolute;
+    top: 170px;
     width: 500px;
 }
 .home-background-right{
-    position: absolute;
+    position:absolute;
+    right: 0;
+    top: 170px;
     width: 500px;
-    margin-left: 983px;
 }
 
 /* OVERLAY FOR CAROUSEL */

@@ -12,8 +12,9 @@ class About extends React.Component {
         return (
             <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
                 <Header />
-                <Image src={abstract4} className="about-top-background-image" />
-                <Image src={abstract3} className="about-bottom-background-image" />
+                <div style={{ width: "100%", position: "absolute" }}>
+                    <Image src={abstract4} className="about-top-background-image" />
+                </div>
                 <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px" }}>
                     <p className="about-title-style">About Us</p>
                     <Row>
@@ -51,6 +52,9 @@ class About extends React.Component {
                         </Col>
                     </Row>
                 </Container>
+                <div style={{ position: "relative" }}>
+                    <Image src={abstract3} className="about-bottom-background-image" />
+                </div>
                 <Footer />
             </Container >
         );
