@@ -135,13 +135,13 @@ class Products extends Component {
 
     render() {
         return (
-            <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
+            <Container fluid className="products-header-padding">
                 <Header />
-                <Image src={abstract6Forground} className="product-image-forground" />
-                <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px" }}>
+                <Image src={abstract6Forground} className="products-image-forground" />
+                <Container fluid className="products-content-padding">
                     <p className="products-title-style">Products</p>
                     <Row>
-                        <CardDeck className="cards-samesize">
+                        <CardDeck className="products-cards-samesize">
                             {this.state.products !== ''
                                 ? this.state.products.map((data, i) => {
                                     return (
