@@ -10,12 +10,14 @@ import { about, about2, abstract3, abstract4 } from '../../image';
 class About extends React.Component {
     render() {
         return (
-            <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
+            <Container fluid className="about-header-padding">
                 <Header />
-                <div style={{ width: "100%", position: "absolute" }}>
+                {/* TOP BACKGROUND IMAGE */}
+                <div className="about-top-background-div">
                     <Image src={abstract4} className="about-top-background-image" />
                 </div>
-                <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px" }}>
+                {/* CONTENT */}
+                <Container fluid className="about-content-padding">
                     <p className="about-title-style">About Us</p>
                     <Row>
                         <Col className="about-col-align">
@@ -52,7 +54,7 @@ class About extends React.Component {
                         </Col>
                     </Row>
                 </Container>
-                <div style={{ position: "relative" }}>
+                <div className="about-bottom-background-div">
                     <Image src={abstract3} className="about-bottom-background-image" />
                 </div>
                 <Footer />

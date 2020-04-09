@@ -1,18 +1,29 @@
+/* PADDING OF HEADER */
+.about-header-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* BACKGROUND PICTURE TOP */
+.about-top-background-div{
+    width: 100%;
+    position: absolute;
+}
+.about-top-background-image{
+    height: 730px;
+    float: right;
+}
+
+/* CONTENT */
+.about-content-padding{
+    padding-left: 150px;
+    padding-right: 150px;
+}
 .about-title-style{
     text-align: center;
     padding-top: 50px;
     font-size: -webkit-xxx-large;
     font-weight: 500;
-}
-.about-bottom-background-image{
-    position: absolute;
-    /* padding-top: 510px; */
-    bottom: -20px;
-    z-index: -1;
-}
-.about-top-background-image{
-    height: 730px;
-    float: right;
 }
 .about-col-align{
     align-self: center;
@@ -20,7 +31,17 @@
 .about-description-style{
     text-align: justify;
 }
-
 .about-picture-scale{
     width: inherit;
+}
+
+/* BOTTOM BACK GROUND IMAGE */
+.about-bottom-background-div{
+    position: relative; 
+}
+.about-bottom-background-image{
+    position: absolute;
+    /* padding-top: 510px; */
+    bottom: -20px;
+    z-index: -1;
 }
