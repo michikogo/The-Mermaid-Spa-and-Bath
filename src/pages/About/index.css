@@ -8,6 +8,7 @@
 .about-top-background-div{
     width: 100%;
     position: absolute;
+    z-index: -1;
 }
 .about-top-background-image{
     height: 730px;
