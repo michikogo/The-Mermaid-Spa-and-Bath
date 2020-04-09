@@ -21,6 +21,9 @@
     font-size: -webkit-xxx-large;
     font-weight: 500;
 }
+.product-details-padding{
+    padding-top: 50px;
+}
 /* CARDS */
 /********* So that the same size with other cards *********/
 .products-cards-samesize{

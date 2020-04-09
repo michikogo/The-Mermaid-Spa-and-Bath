@@ -140,7 +140,7 @@ class Products extends Component {
                 <Image src={abstract6Forground} className="products-image-forground" />
                 <Container fluid className="products-content-padding">
                     <p className="products-title-style">Products</p>
-                    <Row>
+                    <Row className="product-details-padding">
                         <CardDeck className="products-cards-samesize">
                             {this.state.products !== ''
                                 ? this.state.products.map((data, i) => {
