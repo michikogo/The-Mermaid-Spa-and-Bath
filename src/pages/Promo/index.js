@@ -3,8 +3,8 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Col, Row, Image, InputGroup, DropdownButton, Dropdown, Button, Card, Tabs, Tab, ListGroup } from 'react-bootstrap';
 
-import Header from '../../../common/header';
-import Footer from '../../../common/footer';
+import Header from '../../common/header';
+import Footer from '../../common/footer';
 
 const Voucher = () => {
     return (

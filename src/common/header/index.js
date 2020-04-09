@@ -21,6 +21,14 @@ class Header extends Component {
     }
 
     render() {
+        const pages = [
+            { name: "Home", link: "/" },
+            { name: "About Us", link: "/about" },
+            { name: "Products", link: "/products" },
+            { name: "Treatments", link: "/treatments" },
+            { name: "Promo", link: "/promo" },
+            { name: "Reservations", link: "reservations" }
+        ]
         return (
             <Container fluid className="header-padding">
                 <Row>
@@ -34,22 +42,20 @@ class Header extends Component {
                             <Row className='header-title-nav-bar'>
                                 The Mermaid Spa and Bath
                             </Row>
-                            <Row>
+                        </Col>
+                        <Col>
+                            <Row style={{ paddingTop: "60px" }}>
                                 <Nav className="mr-auto">
-                                    <Nav.Link href="/">Home</Nav.Link>
-                                    <Nav.Link href="/about">About Us</Nav.Link>
-                                    <NavDropdown title="Pricing"
-                                        onMouseEnter={this.handleOpen}
-                                        onMouseLeave={this.handleClose}
-                                        open={this.state.isOpen}
-                                        noCaret
-                                        id="basic-nav-dropdown"
-                                    >
-                                        <NavDropdown.Item href="/products">Products</NavDropdown.Item>
-                                        <NavDropdown.Item href="/treatments">Treatments</NavDropdown.Item>
-                                        <NavDropdown.Item href="/voucher">Voucher</NavDropdown.Item>
-                                    </NavDropdown>
-                                    <Nav.Link href="/reservations">Reservations</Nav.Link>
+                                    {pages !== ''
+                                        ? pages.map((data, i) => {
+                                            return (
+                                                <div key={i} style={{ paddingRight: "10px" }}>
+                                                    <Nav.Link href={data.link}>{data.name}</Nav.Link>
+                                                </div>
+                                            );
+                                        })
+                                        : 'No Data'
+                                    }
                                 </Nav>
                             </Row>
                         </Col>

@@ -3,8 +3,8 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Tab, Tabs, Table } from 'react-bootstrap';
 
-import Header from '../../../common/header';
-import Footer from '../../../common/footer';
+import Header from '../../common/header';
+import Footer from '../../common/footer';
 import TreatmentsTable from './treatmentsTable.js';
 
 const Treatments = props => {

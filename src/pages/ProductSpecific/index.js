@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Col, Row, Image, InputGroup, DropdownButton, Dropdown, Button, Card, Tabs, Tab, ListGroup, Toast } from 'react-bootstrap';
-import { check, logo } from '../../../image';
+import { check, logo } from '../../image';
 
-import Header from '../../../common/header';
-import Footer from '../../../common/footer';
+import Header from '../../common/header';
+import Footer from '../../common/footer';
 
 // Normal React Alternative 
 // class ProductSpecific extends Component{

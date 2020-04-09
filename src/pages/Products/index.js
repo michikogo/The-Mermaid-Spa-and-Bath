@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Image, Card, CardDeck, Col, Row } from 'react-bootstrap';
-import { abstract6Forground, product1, product2, product3, product4, product5, product6, product7, product8, product9, product10 } from '../../../image';
+import { abstract6Forground, product1, product2, product3, product4, product5, product6, product7, product8, product9, product10 } from '../../image';
 import { Link } from "react-router-dom";
 
-import Header from '../../../common/header';
-import Footer from '../../../common/footer';
+import Header from '../../common/header';
+import Footer from '../../common/footer';
 
 class Products extends Component {
 
