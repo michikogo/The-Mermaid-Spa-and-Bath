@@ -25,28 +25,29 @@ class Home extends Component {
             { name: reservation, description: "Book an Appointment", url: "/reservation", link: "Reservation >>" }
         ];
         return (
-            <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
+            <Container fluid className="home-header-padding">
                 <Header />
+                {/* GEOMETRIC IMAGES */}
                 <Image src={abstract5} className="home-background-left" />
                 <Image src={abstract5Flip} className="home-background-right" />
                 <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px" }}>
                     <br />
-                    {/* Carousel */}
+                    {/* CAROUSEL */}
                     <Row className="home-carosel-center">
                         <Carousel>
-                            {/* First Slide */}
+                            {/* SLIDES */}
                             {ppt !== ''
                                 ? ppt.map((data, i) => {
                                     return (
                                         <Carousel.Item key={i}>
-                                            <div className="carousel-container">
+                                            <div className="home-carousel-container">
                                                 <img
                                                     className="home-images-size"
                                                     src={data.image}
                                                     alt="First slide"
                                                 />
                                                 <Carousel.Caption>
-                                                    <div className="carousel-content">
+                                                    <div className="home-carousel-content">
                                                         <h3>{data.title}</h3>
                                                         <p>{data.description}</p>
                                                     </div>
@@ -55,12 +56,12 @@ class Home extends Component {
                                         </Carousel.Item>
                                     );
                                 })
-                                : "No Data"
+                                : 'No Data'
                             }
                         </Carousel>
                     </Row>
                     <br />
-                    <Row style={{ paddingBottom: "30px" }}>
+                    <Row className="home-offerings-padding">
                         {details !== ''
                             ? details.map((data, i) => {
                                 return (

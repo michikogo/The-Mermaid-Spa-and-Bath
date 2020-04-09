@@ -1,14 +1,10 @@
-.home-images-size{
-    width: 800px;
+/* HEADER PADDING */
+.home-header-padding{
+    padding-left: 0px !important; 
+    padding-right: 0px !important;
 }
-.home-carosel-center{
-    width: 800px;
-    display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
+
+/* GEOMETRIC IMAGES */
 .home-background-left{
     position: absolute;
     top: 170px;
@@ -22,13 +18,23 @@
 }
 
 /* OVERLAY FOR CAROUSEL */
-.carousel-container {
+.home-carosel-center{
+    width: 800px;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.home-carousel-container {
     position: relative;
     max-width: 800px; /* Maximum width */
     margin: 0 auto; /* Center it */
-  }
-  
-.carousel-container .carousel-content {
+}
+.home-images-size{
+    width: 800px;
+}
+.home-carousel-container .home-carousel-content {
     position: absolute; /* Position the background text */
     bottom: 0; /* At the bottom. Use top:0 to append it to the top */
     background: rgb(0, 0, 0); /* Fallback color */
@@ -38,21 +44,25 @@
     padding: 20px; /* Some padding */
 }
 
-/* OVERLAY */
-.home-offerings-image{
-    width: 100%;
+/* 2ND HALF OF THE CONTENT */
+.home-offerings-padding{
+    padding-bottom: 30px;
 }
+/* OVERLAY */
 .home-offerings-overlay-image {
     position: relative;
     width: 100%;
 }
-/* Original image */
+.home-offerings-image{
+    width: 100%;
+}
+/********* Original image *********/
 .home-offerings-overlay-image .home-offerings-image {
     display: block;
     width: 100%;
     height: auto;
 }
-/* Original text overlay */
+/********* Original text overlay *********/
 .home-offerings-overlay-image .home-offerings-text {
     color: #fff;
     font-size: 20px;
@@ -67,7 +77,7 @@
     font-weight: bold;
 }
 /********* Overlay on hover *******/
-/* New overlay on hover */
+/********* New overlay on hover *********/
 .home-offerings-overlay-image .home-offerings-hover {
     position: absolute;
     top: 0;
@@ -76,7 +86,7 @@
     opacity: 0;
     transition: .5s ease;
 }
-/* New overlay appearance on hover */
+/********* New overlay appearance on hover *********/
 .home-offerings-overlay-image:hover .home-offerings-hover {
     opacity: 1;
 }
