@@ -33,8 +33,11 @@ import abstract6Forground from "../image/abstract6.1.png";
 import abstract6Background from "../image/abstract6.2.png";
 
 // Product Specific
-import check from "../image/check.jpg"
+import check from "../image/check.jpg";
 
+// Promo
+import promo from "../image/promo.jpg";
+import abstract7 from "../image/abstract7.png";
 
 export {
     logo,
@@ -44,4 +47,5 @@ export {
     abstract3, abstract4, abstract5, abstract5Flip, abstract6Forground, abstract6Background,
     product1, product2, product3, product4, product5, product6, product7, product8, product9, product10,
     check,
+    promo, abstract7,
 }
