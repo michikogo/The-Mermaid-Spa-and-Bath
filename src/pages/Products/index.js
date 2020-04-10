@@ -8,6 +8,10 @@ import { Link } from "react-router-dom";
 import Header from '../../common/header';
 import Footer from '../../common/footer';
 
+import * as firebase from 'firebase';
+import 'firebase/firestore';
+import firebasejs from '../../firebase';
+
 class Products extends Component {
 
     constructor(props) {
@@ -134,6 +138,11 @@ class Products extends Component {
     }
 
     render() {
+        // ADD IN FIREBASE
+        // firebasejs.firestore().collection('products').add({
+        //     title: "Rubics Cube"
+        // })
+
         return (
             <Container fluid className="products-header-padding">
                 <Header />
