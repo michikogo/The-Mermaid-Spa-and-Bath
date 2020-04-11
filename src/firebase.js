@@ -4,14 +4,14 @@ import 'firebase/auth';
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyAMTG0JYYia4j-kWOliPzLJVGByi7KYvMM",
-    authDomain: "the-mermaid-data.firebaseapp.com",
-    databaseURL: "https://the-mermaid-data.firebaseio.com",
-    projectId: "the-mermaid-data",
-    storageBucket: "the-mermaid-data.appspot.com",
-    messagingSenderId: "101873903439",
-    appId: "1:101873903439:web:18638a193cb05828aec73a",
-    measurementId: "G-XYVWMZ5X04"
+    apiKey: "AIzaSyCj2XDWZJ3K-grENo81kl8wx4IrwN1Zv04",
+    authDomain: "the-mermaid-data-f581b.firebaseapp.com",
+    databaseURL: "https://the-mermaid-data-f581b.firebaseio.com",
+    projectId: "the-mermaid-data-f581b",
+    storageBucket: "the-mermaid-data-f581b.appspot.com",
+    messagingSenderId: "1088616038828",
+    appId: "1:1088616038828:web:775740215da445dcfe3a09",
+    measurementId: "G-ER29FXR8L9"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
