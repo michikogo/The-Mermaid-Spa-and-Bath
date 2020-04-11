@@ -10,7 +10,7 @@ const Reservations = () => {
     return (
         <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
             <Header />
-            <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px" }}>
+            <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px", paddingBottom: "40px" }}>
                 <p className="reservations-title-style">Reservations</p>
                 <Card style={{ padding: "100px" }}>
                     <Form>
