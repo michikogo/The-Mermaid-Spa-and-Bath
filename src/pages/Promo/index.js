@@ -11,7 +11,7 @@ const Voucher = () => {
     return (
         <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
             <Header />
-            <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px" }}>
+            <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px", paddingBottom: "40px" }}>
                 <p className="promo-title-style">Promo</p>
                 <Row>
                     <Col lg={6}>
