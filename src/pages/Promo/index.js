@@ -37,9 +37,9 @@ const Voucher = () => {
                     </Col>
                 </Row>
             </Container>
-            {/* <div className="promo-background-div">
+            <div className="promo-background-div">
                 <Image src={abstract7} className="promo-background-image" />
-            </div> */}
+            </div>
             <Footer />
         </Container>
     );
