@@ -39,6 +39,9 @@ import check from "../image/check.jpg";
 import promo from "../image/promo.jpg";
 import abstract7 from "../image/abstract7.png";
 
+// Reservations
+import abstract8 from "../image/abstract8.png";
+
 export {
     logo,
     spa1, spa2, spa3, spa4,
@@ -48,4 +51,5 @@ export {
     product1, product2, product3, product4, product5, product6, product7, product8, product9, product10,
     check,
     promo, abstract7,
+    abstract8,
 }
