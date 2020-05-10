@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/The-Mermaid-Spa-and-Bath/precache-manifest.d93db6a955c0a6fb570a3bcbf165c880.js"
+  "/The-Mermaid-Spa-and-Bath/precache-manifest.f39bd823104cf03ee8726253bb0ce048.js"
 );
 
 self.addEventListener('message', (event) => {
