@@ -22,12 +22,12 @@ class Header extends Component {
 
     render() {
         const pages = [
-            { name: "Home", link: "/" },
-            { name: "About Us", link: "/about" },
-            { name: "Products", link: "/products" },
-            { name: "Treatments", link: "/treatments" },
-            { name: "Promo", link: "/promo" },
-            { name: "Reservations", link: "/reservations" }
+            { name: "Home", link: "/The-Mermaid-Spa-and-Bath/#/" },
+            { name: "About Us", link: "/The-Mermaid-Spa-and-Bath/#/about" },
+            { name: "Products", link: "/The-Mermaid-Spa-and-Bath/#/products" },
+            { name: "Treatments", link: "/The-Mermaid-Spa-and-Bath/#/treatments" },
+            { name: "Promo", link: "/The-Mermaid-Spa-and-Bath/#/promo" },
+            { name: "Reservations", link: "/The-Mermaid-Spa-and-Bath/#/reservations" }
         ]
         return (
             <Container fluid className="header-padding">
