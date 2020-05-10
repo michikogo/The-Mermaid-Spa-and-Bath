@@ -1,6 +1,6 @@
 import React from 'react';
 import './Routes.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, HashRouter } from 'react-router-dom';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -12,7 +12,7 @@ import Reservations from './pages/Reservations';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter basename='/'>
       <Route exact path='/' component={Home} />
       <Route path='/about' component={About} />
       <Route path='/products' exact component={Products} />
@@ -21,7 +21,7 @@ function App() {
       <Route path='/promo' component={Promo} />
       <Route path='/reservations' component={Reservations} />
 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
