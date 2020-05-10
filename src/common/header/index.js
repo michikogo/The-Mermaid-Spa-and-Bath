@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { logo } from '../../image';
-import { Container, Image, Col, Row, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Container, Image, Col, Row, Navbar, Nav } from 'react-bootstrap';
 
 
 class Header extends Component {
@@ -27,7 +27,7 @@ class Header extends Component {
             { name: "Products", link: "/products" },
             { name: "Treatments", link: "/treatments" },
             { name: "Promo", link: "/promo" },
-            { name: "Reservations", link: "reservations" }
+            { name: "Reservations", link: "/reservations" }
         ]
         return (
             <Container fluid className="header-padding">

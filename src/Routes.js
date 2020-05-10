@@ -12,7 +12,7 @@ import Reservations from './pages/Reservations';
 
 function App() {
   return (
-    <HashRouter basename='/'>
+    <HashRouter basename='/The-Mermaid-Spa-and-Bath/#/'>
       <Route exact path='/' component={Home} />
       <Route path='/about' component={About} />
       <Route path='/products' exact component={Products} />
