@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/The-Mermaid-Spa-and-Bath/static/css/main.567c3ed5.chunk.css",
-    "main.js": "/The-Mermaid-Spa-and-Bath/static/js/main.607f67eb.chunk.js",
-    "main.js.map": "/The-Mermaid-Spa-and-Bath/static/js/main.607f67eb.chunk.js.map",
+    "main.js": "/The-Mermaid-Spa-and-Bath/static/js/main.799ae9a9.chunk.js",
+    "main.js.map": "/The-Mermaid-Spa-and-Bath/static/js/main.799ae9a9.chunk.js.map",
     "runtime-main.js": "/The-Mermaid-Spa-and-Bath/static/js/runtime-main.01a076fe.js",
     "runtime-main.js.map": "/The-Mermaid-Spa-and-Bath/static/js/runtime-main.01a076fe.js.map",
     "static/css/2.de424728.chunk.css": "/The-Mermaid-Spa-and-Bath/static/css/2.de424728.chunk.css",
-    "static/js/2.64efb50e.chunk.js": "/The-Mermaid-Spa-and-Bath/static/js/2.64efb50e.chunk.js",
-    "static/js/2.64efb50e.chunk.js.map": "/The-Mermaid-Spa-and-Bath/static/js/2.64efb50e.chunk.js.map",
+    "static/js/2.eeed5c15.chunk.js": "/The-Mermaid-Spa-and-Bath/static/js/2.eeed5c15.chunk.js",
+    "static/js/2.eeed5c15.chunk.js.map": "/The-Mermaid-Spa-and-Bath/static/js/2.eeed5c15.chunk.js.map",
     "index.html": "/The-Mermaid-Spa-and-Bath/index.html",
-    "precache-manifest.ab877d63412e0d6fd1d3f16f620838c9.js": "/The-Mermaid-Spa-and-Bath/precache-manifest.ab877d63412e0d6fd1d3f16f620838c9.js",
+    "precache-manifest.03ba8b2900e40b43c81772f0c8eb5c5c.js": "/The-Mermaid-Spa-and-Bath/precache-manifest.03ba8b2900e40b43c81772f0c8eb5c5c.js",
     "service-worker.js": "/The-Mermaid-Spa-and-Bath/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/The-Mermaid-Spa-and-Bath/static/css/2.de424728.chunk.css.map",
     "static/css/main.567c3ed5.chunk.css.map": "/The-Mermaid-Spa-and-Bath/static/css/main.567c3ed5.chunk.css.map",
-    "static/js/2.64efb50e.chunk.js.LICENSE.txt": "/The-Mermaid-Spa-and-Bath/static/js/2.64efb50e.chunk.js.LICENSE.txt",
+    "static/js/2.eeed5c15.chunk.js.LICENSE.txt": "/The-Mermaid-Spa-and-Bath/static/js/2.eeed5c15.chunk.js.LICENSE.txt",
     "static/media/about.png": "/The-Mermaid-Spa-and-Bath/static/media/about.67252437.png",
     "static/media/about2.png": "/The-Mermaid-Spa-and-Bath/static/media/about2.39c82fbf.png",
     "static/media/abstract3.png": "/The-Mermaid-Spa-and-Bath/static/media/abstract3.ea07edba.png",
@@ -48,8 +48,8 @@
   "entrypoints": [
     "static/js/runtime-main.01a076fe.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.64efb50e.chunk.js",
+    "static/js/2.eeed5c15.chunk.js",
     "static/css/main.567c3ed5.chunk.css",
-    "static/js/main.607f67eb.chunk.js"
+    "static/js/main.799ae9a9.chunk.js"
   ]
 }
