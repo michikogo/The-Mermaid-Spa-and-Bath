@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "20da2e32c7a76c474a8b6bb1787ccbf9",
+    "revision": "0f3123ecd328751f1db7e1608fd9fb76",
     "url": "/The-Mermaid-Spa-and-Bath/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/The-Mermaid-Spa-and-Bath/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "1f4190a65d651ffc0736",
+    "revision": "7508d164c50bdfe7dad1",
     "url": "/The-Mermaid-Spa-and-Bath/static/css/main.567c3ed5.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/The-Mermaid-Spa-and-Bath/static/js/2.eeed5c15.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1f4190a65d651ffc0736",
-    "url": "/The-Mermaid-Spa-and-Bath/static/js/main.cbade273.chunk.js"
+    "revision": "7508d164c50bdfe7dad1",
+    "url": "/The-Mermaid-Spa-and-Bath/static/js/main.370fdffd.chunk.js"
   },
   {
     "revision": "57ffca125c8fa651f457",
