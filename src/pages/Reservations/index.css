@@ -1,6 +1,6 @@
 .reservations-image{
   position: absolute;
-  width: 50%;
+  width: 24cm;
   z-index: -1;
 }
 
@@ -12,4 +12,11 @@
   padding-bottom: 50px;
 }
 
-  
+.reservations-link-treatments{
+  color: blue;
+  cursor: pointer;
+}
+
+.reservations-link-treatments:hover{
+  color: blueviolet;
+}
