@@ -11,18 +11,19 @@ import Header from '../../common/header';
 import Footer from '../../common/footer';
 
 const Reservations = () => {
-    // getting Date
+    // Date and Time
     const time = new Date();
     const [startDate, setStartDate] = useState(null);
     const [startTime, setStartTime] = useState(null);
-
     const isWeekday = date => {
         const day = date.getDay(date);
         return day !== 0 && day !== 6;
     };
 
+    // Branch
     const [branch, setBranch] = useState(["Rockwell", "Podium", "SM Mega Mall", "Shangri-la Mall", "Robinsons Magnolia"]);
 
+    // Treatments
     const [facialTreatments, setFacialTreatments] = useState([]);
     useEffect(() => {
         database
@@ -30,10 +31,6 @@ const Reservations = () => {
             .collection('facial')
             .orderBy("key", "asc")
             .onSnapshot((snapshot) => {
-                // To check array size 'snapshot.docs' 
-                // To check data 'snapshot.docs[0].data()' 
-                // debugger
-                // console.log(snapshot.docs[0].data())
                 const facialData = snapshot.docs.map((doc) => ({
                     id: doc.id,
                     ...doc.data()
@@ -41,7 +38,6 @@ const Reservations = () => {
                 setFacialTreatments(facialData)
             })
     }, [])
-
     const [bodyTreatments, setBodyTreatments] = useState([]);
     useEffect(() => {
         database
@@ -56,7 +52,6 @@ const Reservations = () => {
                 setBodyTreatments(bodyData)
             })
     }, [])
-
     const [peel, setPeel] = useState([])
     useEffect(() => {
         database
@@ -71,7 +66,6 @@ const Reservations = () => {
                 setPeel(peelData)
             })
     }, [])
-
     const [microdermabrasion, setMicrodermabrasion] = useState([]);
     useEffect(() => {
         database
@@ -87,6 +81,7 @@ const Reservations = () => {
             })
     })
 
+    // On Submit
     const [validated, setValidated] = useState(false);
     const handleSubmit = (event) => {
         const form = event.currentTarget;
@@ -96,7 +91,6 @@ const Reservations = () => {
         } else {
             console.log()
         }
-
         setValidated(true);
     };
 
