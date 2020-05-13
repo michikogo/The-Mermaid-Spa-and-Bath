@@ -88,12 +88,52 @@ const Reservations = () => {
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
-        } else {
-            console.log()
         }
         setValidated(true);
+        console.log(information)
     };
 
+    // Client Information
+    const [information, setInformation] = useState({
+        lastName: '',
+        firstName: '',
+        contact: '',
+        email: '',
+        appointmentDate: '',
+        appointmentTime: '',
+        branch: '',
+        treatment: ''
+    })
+
+    const reserveTime = (time) => {
+        setStartTime(time)
+
+        const hour = time.getHours()
+        const mins = time.getMinutes()
+        const schedTime = hour + ":" + mins
+        // console.log(schedTime)
+
+        setInformation({ ...information, appointmentTime: schedTime })
+    }
+
+    const reserveDate = (date) => {
+        setStartDate(date)
+
+        // console.log("Month: " + date.getMonth())
+        // console.log("Day: " + date.getDate())
+        // console.log("Year: " + date.getFullYear())
+
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        const numMonth = date.getMonth()
+        const day = date.getDate()
+        const year = date.getFullYear()
+        const schedDate = monthNames[numMonth] + " " + day + ", " + year
+
+        setInformation({ ...information, appointmentDate: schedDate })
+    }
     return (
         <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
             <Header />
@@ -109,6 +149,8 @@ const Reservations = () => {
                                 <Form.Label>Last Name</Form.Label>
                                 <Form.Control
                                     type="text"
+                                    // value={information.lastName}
+                                    onChange={(e) => setInformation({ ...information, lastName: e.target.value })}
                                     placeholder="Last Name"
                                     required
                                 />
@@ -122,6 +164,7 @@ const Reservations = () => {
                                 <Form.Control
                                     type="text"
                                     placeholder="First Name"
+                                    onChange={(e) => setInformation({ ...information, firstName: e.target.value })}
                                     required
                                 />
                                 <Form.Control.Feedback type="invalid">
@@ -139,6 +182,7 @@ const Reservations = () => {
                                     </InputGroup.Prepend>
                                     <Form.Control
                                         type="text"
+                                        onChange={(e) => setInformation({ ...information, contact: e.target.value })}
                                         required
                                     />
                                     <Form.Control.Feedback type="invalid">
@@ -151,6 +195,7 @@ const Reservations = () => {
                                 <Form.Label>Email Address</Form.Label>
                                 <Form.Control
                                     type="email"
+                                    onChange={(e) => setInformation({ ...information, email: e.target.value })}
                                     required
                                 />
                                 <Form.Control.Feedback type="invalid">
@@ -166,7 +211,7 @@ const Reservations = () => {
                                 <DatePicker
                                     className="form-control"
                                     selected={startDate}
-                                    onChange={date => setStartDate(date)}
+                                    onChange={date => reserveDate(date)}
                                     filterDate={isWeekday}
                                     dateFormat="MMMM d, yyyy"
                                     required
@@ -182,7 +227,7 @@ const Reservations = () => {
                                 <DatePicker
                                     className="form-control"
                                     selected={startTime}
-                                    onChange={time => setStartTime(time)}
+                                    onChange={time => reserveTime(time)}
                                     showTimeSelect
                                     showTimeSelectOnly
                                     minTime={time.setHours(9)}
@@ -202,6 +247,7 @@ const Reservations = () => {
                             <Form.Label>Branch</Form.Label>
                             <Form.Control
                                 as="select"
+                                onChange={(e) => setInformation({ ...information, branch: e.target.value })}
                                 required
                             >
                                 <option> </option>
@@ -220,6 +266,8 @@ const Reservations = () => {
                             <Form.Label>Treatment Type</Form.Label>
                             <Form.Control
                                 as="select"
+                                value={information.treatment}
+                                onChange={(e) => setInformation({ ...information, treatment: e.target.value })}
                                 required
                             >
                                 <option> </option>
