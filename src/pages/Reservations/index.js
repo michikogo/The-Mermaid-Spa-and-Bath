@@ -11,6 +11,18 @@ import Header from '../../common/header';
 import Footer from '../../common/footer';
 
 const Reservations = () => {
+    // Client Information
+    const [information, setInformation] = useState({
+        lastName: '',
+        firstName: '',
+        contact: '',
+        email: '',
+        appointmentDate: '',
+        appointmentTime: '',
+        branch: '',
+        treatment: ''
+    })
+
     // Date and Time
     const time = new Date();
     const [startDate, setStartDate] = useState(null);
@@ -19,6 +31,36 @@ const Reservations = () => {
         const day = date.getDay(date);
         return day !== 0 && day !== 6;
     };
+
+    const reserveTime = (time) => {
+        setStartTime(time)
+
+        const hour = time.getHours()
+        const mins = time.getMinutes()
+        const schedTime = hour + ":" + mins
+        // console.log(schedTime)
+
+        setInformation({ ...information, appointmentTime: schedTime })
+    }
+
+    const reserveDate = (date) => {
+        setStartDate(date)
+
+        // console.log("Month: " + date.getMonth())
+        // console.log("Day: " + date.getDate())
+        // console.log("Year: " + date.getFullYear())
+
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        const numMonth = date.getMonth()
+        const day = date.getDate()
+        const year = date.getFullYear()
+        const schedDate = monthNames[numMonth] + " " + day + ", " + year
+
+        setInformation({ ...information, appointmentDate: schedDate })
+    }
 
     // Branch
     const [branch, setBranch] = useState(["Rockwell", "Podium", "SM Mega Mall", "Shangri-la Mall", "Robinsons Magnolia"]);
@@ -88,52 +130,16 @@ const Reservations = () => {
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
+        } else {
+            database
+                .firestore()
+                .collection('reservations')
+                .add({ ...information })
+            console.log("Add to Database: " + { ...information })
         }
         setValidated(true);
-        console.log(information)
     };
 
-    // Client Information
-    const [information, setInformation] = useState({
-        lastName: '',
-        firstName: '',
-        contact: '',
-        email: '',
-        appointmentDate: '',
-        appointmentTime: '',
-        branch: '',
-        treatment: ''
-    })
-
-    const reserveTime = (time) => {
-        setStartTime(time)
-
-        const hour = time.getHours()
-        const mins = time.getMinutes()
-        const schedTime = hour + ":" + mins
-        // console.log(schedTime)
-
-        setInformation({ ...information, appointmentTime: schedTime })
-    }
-
-    const reserveDate = (date) => {
-        setStartDate(date)
-
-        // console.log("Month: " + date.getMonth())
-        // console.log("Day: " + date.getDate())
-        // console.log("Year: " + date.getFullYear())
-
-        const monthNames = ["January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December"
-        ];
-
-        const numMonth = date.getMonth()
-        const day = date.getDate()
-        const year = date.getFullYear()
-        const schedDate = monthNames[numMonth] + " " + day + ", " + year
-
-        setInformation({ ...information, appointmentDate: schedDate })
-    }
     return (
         <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
             <Header />
