@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Col, Form, Image, Button, Card, InputGroup } from 'react-bootstrap';
+import { Container, Col, Form, Image, Button, Card, InputGroup, Modal } from 'react-bootstrap';
 import { abstract8 } from '../../image';
 import database from "../../firebase";
 
@@ -131,6 +131,7 @@ const Reservations = () => {
             event.preventDefault();
             event.stopPropagation();
         } else {
+            handleShow()
             database
                 .firestore()
                 .collection('reservations')
@@ -139,6 +140,14 @@ const Reservations = () => {
         }
         setValidated(true);
     };
+
+    // Modal
+    const [show, setShow] = useState(false);
+    const handleClose = () => {
+        setShow(false);
+        window.location.reload(true)
+    }
+    const handleShow = () => setShow(true);
 
     return (
         <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
@@ -323,10 +332,16 @@ const Reservations = () => {
                             fringilla nunc in feugiat interdum.</div>
                         </Form.Group>
                         <div style={{ textAlign: "end" }}>
-                            <Button variant="primary" type="submit" style={{ width: "150px" }} >
+                            <Button variant="primary" type="submit" style={{ width: "150px" }}>
                                 Submit
-                        </Button>
+                            </Button>
                         </div>
+                        <Modal show={show} onHide={handleClose} centered>
+                            <Modal.Header closeButton>
+                                <Modal.Title>Reservation Submitted</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>Woohoo, {information.firstName} {information.lastName} your reservation is being processed. Please check either your email or text for confirmation.</Modal.Body>
+                        </Modal>
                     </Form>
                 </Card>
             </Container>
