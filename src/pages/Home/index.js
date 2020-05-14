@@ -33,13 +33,13 @@ class Home extends Component {
                 <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px" }}>
                     <br />
                     {/* CAROUSEL */}
-                    <Row className="home-carosel-center">
+                    <Row className="home-carosel-center" xs={12}>
                         <Carousel>
                             {/* SLIDES */}
                             {ppt !== ''
                                 ? ppt.map((data, i) => {
                                     return (
-                                        <Carousel.Item key={i}>
+                                        <Carousel.Item key={i} >
                                             <div className="home-carousel-container">
                                                 <img
                                                     className="home-images-size"

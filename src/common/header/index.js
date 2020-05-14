@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { logo } from '../../image';
-import { Container, Image, Col, Row, Navbar, Nav } from 'react-bootstrap';
+import { Container, Image, Col, Row, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 
 class Header extends Component {
@@ -31,21 +31,24 @@ class Header extends Component {
         ]
         return (
             <Container fluid className="header-padding">
-                <Row>
-                    <Navbar bg="dark" variant="dark" className="header-details-nav-bar">
-                        <Col xs={2}>
-                            <div>
-                                <Image src={logo} rounded className="header-logo-nav-bar" />
-                            </div>
+                <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark" className="header-details-nav-bar">
+                    <Row style={{ width: "100%" }}>
+                        <Col xs={8} md={10} lg={6}>
+                            <Navbar.Brand>
+                                <Row>
+                                    <Col md={2} lg={4}>
+                                        <Image src={logo} rounded className="header-logo-nav-bar" />
+                                    </Col>
+                                    <Col md={7} lg={8} className='header-title-nav-bar'>
+                                        The Meramaid Spa and Bath
+                                    </Col>
+                                </Row>
+                            </Navbar.Brand>
                         </Col>
-                        <Col>
-                            <Row className='header-title-nav-bar'>
-                                The Mermaid Spa and Bath
-                            </Row>
-                        </Col>
-                        <Col>
-                            <Row style={{ paddingTop: "60px" }}>
-                                <Nav className="mr-auto">
+                        <Col xs={4} md={2} lg={6} className="header-hamburger">
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav" className="header-toggle" />
+                            <Navbar.Collapse id="responsive-navbar-nav" className="header-navbar">
+                                <Nav className="header-menu">
                                     {pages !== ''
                                         ? pages.map((data, i) => {
                                             return (
@@ -57,11 +60,11 @@ class Header extends Component {
                                         : 'No Data'
                                     }
                                 </Nav>
-                            </Row>
+                            </Navbar.Collapse>
                         </Col>
-                    </Navbar>
-                </Row>
-            </Container>
+                    </Row>
+                </Navbar>
+            </Container >
         );
     }
 }

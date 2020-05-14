@@ -131,3 +131,9 @@
     transform: translate(-50%, -50%);
     text-align: center;
 } */
+
+@media(max-width:575px){
+    .main-site-nav li a {
+      padding-left: 15;
+    }
+}

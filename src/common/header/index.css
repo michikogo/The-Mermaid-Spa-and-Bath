@@ -1,11 +1,13 @@
+.header-padding{
+    padding-right: 0px !important; 
+    padding-left: 0px !important;
+}
 .header-details-nav-bar{
     width: 100%;
     padding-left: 43px !important;
     padding-right: 50px !important;
 }
-
 .header-title-nav-bar{
-    color: rgba(255,255,255,.5);
     font-size: 35px;
     padding-left: 5px;
 }
@@ -14,4 +16,69 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media(max-width:425px){
+    .header-details-nav-bar{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .header-logo-nav-bar{
+        margin-left: 15px;
+    }
+    .header-title-nav-bar{
+        display: none;
+    }
+    .header-navbar{
+        text-align: center;
+    }
+    .header-hamburger{
+        text-align-last: end;
+        align-self: center;
+    }
+    .header-logo{
+        margin-left: 15px;
+    }
+}
+
+@media(max-width: 768px){
+    .header-details-nav-bar{
+        padding-left: 30px !important;
+        padding-right: 0px !important;
+    }
+    .header-hamburger{
+        text-align-last: end;
+        align-self: center;
+    }
+    .header-title-nav-bar{
+        text-align-last: end;
+        align-self: center;
+        margin-left: 30px;
+    }
+
+}
+@media(max-width: 1024px){
+    .header-hamburger{
+        text-align-last: end;
+        align-self: center;
+    }
+    
+    .header-title-nav-bar{
+        text-align-last: end;
+        align-self: center;
+    }
+}
+@media(min-width: 1440px) {
+    .header-hamburger{
+        text-align-last: end;
+        align-self: flex-end;
+    } 
+    
+    .header-title-nav-bar{
+        text-align-last: end;
+        align-self: center;
+    }
+    .header-menu{
+        padding-left: 90px;
+    }
 }
