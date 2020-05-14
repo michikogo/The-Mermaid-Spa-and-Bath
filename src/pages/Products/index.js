@@ -150,11 +150,11 @@ class Products extends Component {
                 <Container fluid className="products-content-padding">
                     <p className="products-title-style">Products</p>
                     <Row className="product-details-padding">
-                        <CardDeck className="products-cards-samesize">
+                        <CardDeck>
                             {this.state.products !== ''
                                 ? this.state.products.map((data, i) => {
                                     return (
-                                        <Col sm={12} lg={3} key={i} style={{ paddingBottom: "25px" }}>
+                                        <Col xs={12} sm={6} lg={3} key={i} style={{ paddingBottom: "25px" }}>
                                             <Card className="products-card">
                                                 <Link to={{
                                                     pathname: "/products/" + data.link,
@@ -187,7 +187,7 @@ class Products extends Component {
                     </Row>
                 </Container>
                 <Footer />
-            </Container>
+            </Container >
         );
     }
 }

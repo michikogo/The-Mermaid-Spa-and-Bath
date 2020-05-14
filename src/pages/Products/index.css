@@ -26,11 +26,6 @@
 }
 /* CARDS */
 /********* So that the same size with other cards *********/
-.products-cards-samesize{
-    display: flex;
-    flex-direction: row;
-}
- 
 .products-card{
     padding-top: 10px;
     /* So that same size with other cards */
@@ -50,4 +45,24 @@
 .products-card-price{
     text-align: right;
     color: blue;
+}
+
+@media(max-width: 425px){
+    .products-content-padding{
+        padding-left: 50px !important;
+        padding-right: 50px !important; 
+    }
+}
+
+@media(max-width: 768px){
+    .products-content-padding{
+        padding-left: 100px !important;
+        padding-right: 100px !important; 
+    }
+}
+@media(min-width: 1024px){
+    .products-content-padding{
+        padding-left: 150px !important;
+        padding-right: 150px !important; 
+    }
 }
