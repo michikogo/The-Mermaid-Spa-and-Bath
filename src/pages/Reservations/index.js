@@ -10,7 +10,8 @@ import database from "../../firebase";
 import Header from '../../common/header';
 import Footer from '../../common/footer';
 
-const Reservations = (props) => {
+const Reservations = props => {
+    // console.log(props.location.state)
     // Client Information
     const [information, setInformation] = useState({
         lastName: '',
@@ -68,6 +69,12 @@ const Reservations = (props) => {
     // Treatments
     const [facialTreatments, setFacialTreatments] = useState([]);
     useEffect(() => {
+        if (props.location.state !== undefined) {
+            setInformation({ ...information, treatment: props.location.state.treatment })
+            console.log(props.location.state.treatment)
+            console.log(information.treatment)
+        }
+
         database
             .firestore()
             .collection('facial')
