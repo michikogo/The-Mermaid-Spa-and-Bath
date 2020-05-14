@@ -27,10 +27,10 @@ class Home extends Component {
         return (
             <Container fluid className="home-header-padding">
                 <Header />
-                {/* GEOMETRIC IMAGES */}
-                <Image src={abstract5} className="home-background-left" />
-                <Image src={abstract5Flip} className="home-background-right" />
-                <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px" }}>
+                <Container fluid className="home-content-padding">
+                    {/* GEOMETRIC IMAGES */}
+                    <Image src={abstract5} className="home-background-left" />
+                    <Image src={abstract5Flip} className="home-background-right" />
                     <br />
                     {/* CAROUSEL */}
                     <Row className="home-carosel-center" xs={12}>
@@ -40,7 +40,7 @@ class Home extends Component {
                                 ? ppt.map((data, i) => {
                                     return (
                                         <Carousel.Item key={i} >
-                                            <div className="home-carousel-container">
+                                            <div className="home-carousel-container" >
                                                 <img
                                                     className="home-images-size"
                                                     src={data.image}
@@ -65,21 +65,21 @@ class Home extends Component {
                         {details !== ''
                             ? details.map((data, i) => {
                                 return (
-                                    <Col sm={4} key={i}>
+                                    <Col md={4} key={i}>
                                         <div className="home-offerings-overlay-image">
                                             <Image src={data.name} className="home-offerings-image" />
                                             <div className="home-offerings-normal">
                                                 <div className="home-offerings-text">
-                                                    <p style={{ color: "black" }}>{data.description}</p>
-                                                    <a href={data.url} style={{ color: "black" }}>
+                                                    <p className="home-offerings-description">{data.description}</p>
+                                                    <a href={data.url} className="home-offerings-description">
                                                         {data.link}
                                                     </a>
                                                 </div>
                                             </div>
                                             <div className="home-offerings-hover">
                                                 <div className="home-offerings-text">
-                                                    <p style={{ color: "white" }}>{data.description}</p>
-                                                    <a href={data.url} style={{ color: "white" }}>{data.link}</a>
+                                                    <p className="home-offerings-hover-description">{data.description}</p>
+                                                    <a href={data.url} className="home-offerings-hover-description">{data.link}</a>
                                                 </div>
                                             </div>
                                         </div>
