@@ -10,7 +10,7 @@ import database from "../../firebase";
 import Header from '../../common/header';
 import Footer from '../../common/footer';
 
-const Reservations = () => {
+const Reservations = (props) => {
     // Client Information
     const [information, setInformation] = useState({
         lastName: '',
@@ -282,6 +282,7 @@ const Reservations = () => {
                             <Form.Control
                                 as="select"
                                 value={information.treatment}
+                                // value={props.location.state.treatment}
                                 onChange={(e) => setInformation({ ...information, treatment: e.target.value })}
                                 required
                             >

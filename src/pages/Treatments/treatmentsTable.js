@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const TreatmentsTable = props => {
     console.log("Treatments Table");
@@ -26,7 +27,16 @@ const TreatmentsTable = props => {
                                     <p style={{ marginBottom: "5px" }}>{data.desc}</p>
                                 </td>
                                 <td>{data.price}</td>
-                                <td>Book now</td>
+                                <td>
+                                    <Link to={{
+                                        pathname: "/reservations/",
+                                        state: {
+                                            treatment: data.name
+                                        }
+                                    }} onClick={() => console.log("Clicked: " + data.name)}>
+                                        Book now
+                                    </Link>
+                                </td>
                             </tr>
                         );
                     })
