@@ -20,7 +20,7 @@ class About extends React.Component {
                 <Container fluid className="about-content-padding">
                     <p className="about-title-style">About Us</p>
                     <Row>
-                        <Col className="about-col-align">
+                        <Col className="about-col-align" sm={12} md={7}>
                             <p className="about-description-style">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque orci eros, sed fermentum tortor tincidunt
                                 quis. In tincidunt lacinia mauris, vitae ullamcorper mauris euismod ac. Suspendisse mattis accumsan porttitor. Nam quis
@@ -32,15 +32,15 @@ class About extends React.Component {
                                 ante. Suspendisse eget molestie massa.
                             </p>
                         </Col>
-                        <Col>
+                        <Col md={5} className="about-picture-bottom">
                             <Image src={about} className="about-picture-scale" />
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
-                            <Image src={about2} className="about-picture-scale" />
+                        <Col md={5}>
+                            <Image src={about2} className="about-picture-scale about-picture-sm" />
                         </Col>
-                        <Col className="about-col-align">
+                        <Col className="about-col-align" sm={12} md={7}>
                             <p className="about-description-style">
                                 Cras venenatis tellus sit amet erat consequat, vel ultricies magna consectetur. Morbi vestibulum lacinia rutrum. Nulla
                                 vulputate odio vitae nibh auctor, non hendrerit eros condimentum. Curabitur molestie viverra est et laoreet. Nulla eu

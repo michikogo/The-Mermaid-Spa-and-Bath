@@ -46,3 +46,34 @@
     bottom: -20px;
     z-index: -1;
 }
+
+@media(max-width: 425px){
+    .about-content-padding{
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+    .about-top-background-image{
+        height: 300px !important;
+    }
+    .about-picture-sm{
+        display: none;
+    }
+    .about-bottom-background-image{
+        width: 300px !important;
+    }
+}
+@media(max-width: 768px){
+    .about-content-padding{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .about-picture-bottom{
+        align-self: flex-end;
+    }
+}
+
+@media(max-width: 1024px){
+    .about-top-background-image{
+        height: 480px;
+    }
+}
