@@ -67,6 +67,7 @@
 }
 .home-offerings-image{
     width: 100%;
+    opacity: 0.5;
 }
 /********* Original image *********/
 .home-offerings-overlay-image .home-offerings-image {
