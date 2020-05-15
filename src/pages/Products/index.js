@@ -154,7 +154,7 @@ class Products extends Component {
                             {this.state.products !== ''
                                 ? this.state.products.map((data, i) => {
                                     return (
-                                        <Col xs={12} sm={6} lg={3} key={i} style={{ paddingBottom: "25px" }}>
+                                        <Col xs={12} sm={6} lg={4} xl={3} key={i} style={{ paddingBottom: "25px" }}>
                                             <Card className="products-card">
                                                 <Link to={{
                                                     pathname: "/products/" + data.link,
