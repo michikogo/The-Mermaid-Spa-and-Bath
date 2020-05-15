@@ -65,7 +65,7 @@ class Home extends Component {
                         {details !== ''
                             ? details.map((data, i) => {
                                 return (
-                                    <Col md={4} key={i}>
+                                    <Col md={4} key={i} className="home-offerings-overlay-div">
                                         <div className="home-offerings-overlay-image">
                                             <Image src={data.name} className="home-offerings-image" />
                                             <div className="home-offerings-normal">

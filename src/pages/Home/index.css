@@ -159,15 +159,15 @@
     .home-background-left{
         display: none;
     }
-    .home-offerings-overlay-image{
-        padding-bottom: 10px;
+    .home-offerings-overlay-div{
+        padding-top: 15px;
     }
     .home-carousel-content{
         font-size: x-small !important;
     }
 }
 
-@media(max-width: 768px){
+@media(min-width: 426px){
     .home-content-padding {
         padding-left: 100px !important;
         padding-right: 100px !important; 
@@ -182,20 +182,19 @@
     .home-background-left{
         display: none;
     }
-    .home-offerings-overlay-image{
+    .home-offerings-overlay-div{
         padding-bottom: 10px;
     }
     .home-offerings-text, .home-carousel-content{
         font-size: medium !important;
-    }
-    
+    }   
 }
 
-@media(min-width: 1024px){
-    /* .home-content-padding {
+@media(min-width: 800px){
+    .home-content-padding {
         padding-left: 150px !important;
         padding-right: 150px !important; 
-    } */
+    }
     .home-carosel-center{
         width: auto;
     }
@@ -207,5 +206,10 @@
         top: auto;
         width: auto;
         left: 0;
+        display: flex;
     }
+    
+    .home-offerings-text, .home-carousel-content{
+        font-size: large !important;
+    }  
 }
