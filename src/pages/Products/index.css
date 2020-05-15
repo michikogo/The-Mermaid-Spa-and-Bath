@@ -56,13 +56,13 @@
 
 @media(max-width: 768px){
     .products-content-padding{
-        padding-left: 100px !important;
-        padding-right: 100px !important; 
+        padding-left: 100px;
+        padding-right: 100px; 
     }
 }
 @media(min-width: 1024px){
     .products-content-padding{
-        padding-left: 150px !important;
-        padding-right: 150px !important; 
+        padding-left: 150px;
+        padding-right: 150px; 
     }
 }
