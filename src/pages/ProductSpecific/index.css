@@ -67,7 +67,6 @@
 }
 /* PAYMENT DETAILS */
 .specific-product-payment-options{
-    
     width: 25px;
 }
 .specific-product-payment{
@@ -87,4 +86,62 @@
 }
 .specific-product-more-details-tab{
     padding-top: 50px;
+}
+
+@media(max-width: 425px){
+    .specific-product-content-padding{
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+    .specific-product-center{
+        justify-content: center;
+    }
+    .specific-product-title{
+        text-align: center;
+    }
+    .specific-product-desc {
+        text-align: -webkit-center;
+    }
+    .specific-product-emoji, .specific-product-benefits{
+        display: none;
+    }
+    .specific-product-price{
+        padding-top: 0px;
+    }
+    .specific-product-add-buy{
+        padding-right: 0px;
+        padding-left: 8px;
+    }
+    .specific-product-payment-options-div{
+        width: 50%;
+    }   
+}
+
+@media(max-width: 768px){
+    .specific-product-content-padding{
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+    .specific-product-add-buy{
+        padding-right: 0px;
+        padding-left: 8px;
+    }
+    .specific-product-quantity-center{
+        justify-content: center !important;
+        align-items: baseline;
+    }
+}
+
+@media(max-width: 1024px){
+    .specific-product-content-padding{
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+    }
+    .specific-product-add-buy{
+        padding-right: 0px;
+        padding-left: 8px;
+    }
+    .specific-product-quantity-center{
+        align-items: baseline;
+    }
 }

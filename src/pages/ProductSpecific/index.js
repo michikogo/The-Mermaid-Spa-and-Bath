@@ -46,7 +46,6 @@ const ProductSpecific = props => {
 
     const [addToCart, setAddToCart] = useState(false);
 
-
     return (
         <Container fluid className="specific-product-header-padding">
             <Header />
@@ -64,13 +63,13 @@ const ProductSpecific = props => {
                     </Col>
                     {/* PRODUCT DETAILS */}
                     <Col>
-                        <Row>
+                        <Row className="specific-product-center">
                             <p className="specific-product-title">{props.location.state.name}</p>
                         </Row>
-                        <Row>
+                        <Row className="specific-product-center">
                             <p className="specific-product-brand">The Body Shop</p>
                         </Row>
-                        <Row>
+                        <Row className="specific-product-center">
                             <p className="specific-product-desc">{props.location.state.desc}</p>
                         </Row>
                         <Row>
@@ -80,7 +79,7 @@ const ProductSpecific = props => {
                                         return (
                                             <div>
                                                 <Row>
-                                                    <Col lg={1} className="specific-product-emoji">
+                                                    <Col md={1} lg={1} className="specific-product-emoji">
                                                         <span>🎉</span>
                                                     </Col>
                                                     <Col className="specific-product-benefits-div">
@@ -94,15 +93,15 @@ const ProductSpecific = props => {
                                 }
                             </ListGroup>
                         </Row>
-                        <Row>
+                        <Row className="specific-product-center">
                             <p className="specific-product-price">{props.location.state.price}</p>
                         </Row>
                         <Row>
                             <p className="specific-product-quantity-title">Quantity</p>
                         </Row>
                         {/* DROPDOWN OPTION OF HOW MANY ITEMS */}
-                        <Row>
-                            <Col lg={1}>
+                        <Row className="specific-product-quantity-center">
+                            <Col xs={3} lg={2}>
                                 <div className="specific-product-dropdown">
                                     <DropdownButton
                                         as={InputGroup.Prepend}
@@ -119,21 +118,25 @@ const ProductSpecific = props => {
                                 </div>
                             </Col>
                             {/* BUTTON TO ADD TO CART OR BUY */}
-                            <Col lg={3} className="specific-product-add-buy">
+                            <Col xs={4} lg={3} className="specific-product-add-buy">
                                 <Button variant="success">Buy Now</Button>
                             </Col>
-                            <Col lg={3} className="specific-product-add-buy">
+                            <Col xs={4} lg={3} className="specific-product-add-buy">
                                 <Button variant="primary" onClick={() => setAddToCart(true)}>Add to Cart</Button>
                             </Col>
                             {/* POPUP (TOAST) WHEN ADD TO CART IS CLICKED */}
-                            <Col lg={5}>
-                                <Toast onClose={() => setAddToCart(false)} show={addToCart} delay={5000} autohide className="specific-product-toast">
-                                    <Toast.Header>
-                                        <img src={logo} className="rounded mr-2 specific-product-logo" alt="" />
-                                        <strong className="mr-auto">The Mermaid Spa and Bath </strong>
-                                    </Toast.Header>
-                                    <Toast.Body>{props.location.state.name} is added to cart</Toast.Body>
-                                </Toast>
+                            <Col xs={5} lg={5}>
+                                {addToCart === true
+                                    ?
+                                    <Toast onClose={() => setAddToCart(false)} show={addToCart} delay={5000} autohide className="specific-product-toast">
+                                        <Toast.Header>
+                                            <img src={logo} className="rounded mr-2 specific-product-logo" alt="" />
+                                            <strong className="mr-auto">The Mermaid Spa and Bath </strong>
+                                        </Toast.Header>
+                                        <Toast.Body>{props.location.state.name} is added to cart</Toast.Body>
+                                    </Toast>
+                                    : ''
+                                }
                             </Col>
                         </Row>
                         {/* PAYMENT DETAILS */}
@@ -144,7 +147,7 @@ const ProductSpecific = props => {
                             {paymentOptions !== ''
                                 ? paymentOptions.map((data, i) => {
                                     return (
-                                        <div>
+                                        <div className="specific-product-payment-options-div">
                                             <Col key={i}>
                                                 <Image src={check} className="specific-product-payment-options" /> {data.name}
                                             </Col>
