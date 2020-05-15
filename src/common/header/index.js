@@ -33,7 +33,7 @@ class Header extends Component {
             <Container fluid className="header-padding">
                 <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark" className="header-details-nav-bar">
                     <Row style={{ width: "100%" }}>
-                        <Col xs={8} md={10} lg={6}>
+                        <Col xs={6} md={9} lg={6}>
                             <Navbar.Brand>
                                 <Row>
                                     <Col md={2} lg={4}>
@@ -45,7 +45,7 @@ class Header extends Component {
                                 </Row>
                             </Navbar.Brand>
                         </Col>
-                        <Col xs={4} md={2} lg={6} className="header-hamburger">
+                        <Col xs={6} md={3} lg={6} className="header-hamburger">
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" className="header-toggle" />
                             <Navbar.Collapse id="responsive-navbar-nav" className="header-navbar">
                                 <Nav className="header-menu">
