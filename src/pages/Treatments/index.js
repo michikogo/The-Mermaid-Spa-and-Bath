@@ -130,7 +130,7 @@ const Treatments = props => {
     return (
         <Container fluid className="treatments-header-padding">
             <Header />
-            <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px" }}>
+            <Container fluid className="treatments-content-padding">
                 <p className="treatments-title-style">Treatments</p>
                 <Tabs fill defaultActiveKey="0" id="uncontrolled-tab-example">
                     <Tab eventKey="0" title="Facial Treatments" style={{ paddingTop: "30px" }}>

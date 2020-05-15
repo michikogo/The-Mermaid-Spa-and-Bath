@@ -2,10 +2,10 @@
   padding-left: 0px;
   padding-right: 0px; 
 }
- .treatments-content-padding{
+.treatments-content-padding{
   padding-left: 150px;
   padding-right: 150px;
- }
+}
 .treatments-title-style{
   text-align: center;
     padding-top: 50px;
@@ -13,9 +13,21 @@
     font-weight: 500;
     padding-bottom: 50px;
 }
-
- .treatments-image-forground{
+.treatments-image-forground{
    position: absolute;
    width: 1500px;
    height: 300px;
- }
+}
+
+@media(max-width: 425px){
+  .treatments-content-padding{
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+}
+@media(max-width: 768px){
+  .treatments-content-padding{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
