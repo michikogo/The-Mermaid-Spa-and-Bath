@@ -47,9 +47,6 @@
         padding-left: 50px !important;
         padding-right: 50px !important;
     }
-    .promo-background-div{
-        display: none;
-    }
 }
 @media(max-width:1024px){
     .promo-content-padding{
