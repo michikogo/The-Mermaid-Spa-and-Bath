@@ -46,6 +46,7 @@
         padding-left: 30px !important;
         padding-right: 0px !important;
     }
+
 }
 
 @media(max-width: 1199px){
@@ -57,6 +58,7 @@
     .header-title-nav-bar{
         text-align-last: end;
         align-self: center;
+        padding-left: 30px;
     }
 }
 
