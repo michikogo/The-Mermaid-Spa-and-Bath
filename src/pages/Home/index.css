@@ -182,17 +182,20 @@
     .home-background-left{
         display: none;
     }
+    .home-offerings-overlay-image{
+        padding-bottom: 10px;
+    }
     .home-offerings-text, .home-carousel-content{
-        font-size: small !important;
+        font-size: medium !important;
     }
     
 }
 
 @media(min-width: 1024px){
-    .home-content-padding {
+    /* .home-content-padding {
         padding-left: 150px !important;
         padding-right: 150px !important; 
-    }
+    } */
     .home-carosel-center{
         width: auto;
     }
