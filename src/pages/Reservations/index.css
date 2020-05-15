@@ -1,9 +1,14 @@
-.reservations-image{
-  position: absolute;
-  width: 24cm;
-  z-index: -1;
+.reservations-content-padding{
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 40px;
 }
-
+.reservations-top-image{
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
 .reservations-title-style{
   text-align: center;
   padding-top: 50px;
@@ -11,12 +16,39 @@
   font-weight: 500;
   padding-bottom: 50px;
 }
-
+.reservation-card-padding{
+  padding: 100px;
+}
 .reservations-link-treatments{
   color: blue;
   cursor: pointer;
 }
-
 .reservations-link-treatments:hover{
   color: blueviolet;
 }
+
+@media(max-width:425px){
+  .reservations-content-padding{
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+  .reservation-card-padding{
+    padding: 30px !important;
+  }
+}
+@media(max-width:768px){
+  .reservations-content-padding{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .reservation-card-padding{
+    padding: 50px !important;
+  }
+}
+
+@media(max-width:1024px){
+  .reservation-card-padding{
+    padding: 80px;
+  }
+}
+

@@ -40,7 +40,8 @@ import promo from "../image/promo.jpg";
 import abstract7 from "../image/abstract7.png";
 
 // Reservations
-import abstract8 from "../image/abstract8.png";
+import abstract8Top from "../image/abstract8-top.png";
+import abstract8Bottom from '../image/abstract8-bottom.png'
 
 export {
     logo,
@@ -51,5 +52,5 @@ export {
     product1, product2, product3, product4, product5, product6, product7, product8, product9, product10,
     check,
     promo, abstract7,
-    abstract8,
+    abstract8Top, abstract8Bottom,
 }

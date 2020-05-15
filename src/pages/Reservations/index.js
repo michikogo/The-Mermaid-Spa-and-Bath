@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Col, Form, Image, Button, Card, InputGroup, Modal } from 'react-bootstrap';
-import { abstract8 } from '../../image';
+import { abstract8Top } from '../../image';
 import database from "../../firebase";
 
 import Header from '../../common/header';
@@ -159,15 +159,15 @@ const Reservations = props => {
     return (
         <Container fluid style={{ paddingLeft: "0px", paddingRight: "0px" }}>
             <Header />
-            <Image src={abstract8} className="reservations-image" />
-            <Container fluid style={{ paddingLeft: "150px", paddingRight: "150px", paddingBottom: "40px" }}>
+            <Container fluid className="reservations-content-padding">
+                <Image src={abstract8Top} className="reservations-top-image" />
                 <p className="reservations-title-style">Reservations</p>
-                <Card style={{ padding: "100px" }}>
+                <Card className="reservation-card-padding">
                     {/* FORM */}
                     <Form noValidate validated={validated} onSubmit={handleSubmit}>
                         <Form.Row>
                             {/* LAST NAME */}
-                            <Form.Group as={Col} controlId="formGridLastName">
+                            <Form.Group sm={12} lg={6} as={Col} controlId="formGridLastName">
                                 <Form.Label>Last Name</Form.Label>
                                 <Form.Control
                                     type="text"
@@ -181,7 +181,7 @@ const Reservations = props => {
                                 </Form.Control.Feedback>
                             </Form.Group>
                             {/* FIRST NAME */}
-                            <Form.Group as={Col} controlId="formGridFirstName">
+                            <Form.Group sm={12} lg={6} as={Col} controlId="formGridFirstName">
                                 <Form.Label>First Name</Form.Label>
                                 <Form.Control
                                     type="text"
@@ -196,7 +196,7 @@ const Reservations = props => {
                         </Form.Row>
                         <Form.Row>
                             {/* CONTACT NUMBER */}
-                            <Form.Group as={Col} controlId="formGridContactNumber">
+                            <Form.Group sm={12} lg={6} as={Col} controlId="formGridContactNumber">
                                 <Form.Label>Contact Number</Form.Label>
                                 <InputGroup>
                                     <InputGroup.Prepend>
@@ -213,7 +213,7 @@ const Reservations = props => {
                                 </InputGroup>
                             </Form.Group>
                             {/* EMAIL ADDRESS */}
-                            <Form.Group as={Col} controlId="formGridEmailAddress">
+                            <Form.Group sm={12} lg={6} as={Col} controlId="formGridEmailAddress">
                                 <Form.Label>Email Address</Form.Label>
                                 <Form.Control
                                     type="email"
@@ -227,7 +227,7 @@ const Reservations = props => {
                         </Form.Row>
                         <Form.Row>
                             {/* DATE */}
-                            <Form.Group as={Col} controlId="formGridDate">
+                            <Form.Group sm={12} md={6} as={Col} controlId="formGridDate">
                                 <Form.Label>Preferred Date</Form.Label>
                                 <br />
                                 <DatePicker
@@ -243,7 +243,7 @@ const Reservations = props => {
                                 </Form.Control.Feedback>
                             </Form.Group>
                             {/* TIME */}
-                            <Form.Group as={Col} controlId="formGridTime">
+                            <Form.Group sm={12} md={6} as={Col} controlId="formGridTime">
                                 <Form.Label>Preferred Time</Form.Label>
                                 <br />
                                 <DatePicker
@@ -353,7 +353,7 @@ const Reservations = props => {
                     </Form>
                 </Card>
             </Container>
-            <Footer style={{ marginTop: "20px" }} />
+            <Footer />
         </Container >
     );
 }
