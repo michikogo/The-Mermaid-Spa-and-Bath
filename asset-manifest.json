@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/The-Mermaid-Spa-and-Bath/static/css/main.e029fae9.chunk.css",
-    "main.js": "/The-Mermaid-Spa-and-Bath/static/js/main.7e41046b.chunk.js",
-    "main.js.map": "/The-Mermaid-Spa-and-Bath/static/js/main.7e41046b.chunk.js.map",
+    "main.js": "/The-Mermaid-Spa-and-Bath/static/js/main.2e8b71aa.chunk.js",
+    "main.js.map": "/The-Mermaid-Spa-and-Bath/static/js/main.2e8b71aa.chunk.js.map",
     "runtime-main.js": "/The-Mermaid-Spa-and-Bath/static/js/runtime-main.01a076fe.js",
     "runtime-main.js.map": "/The-Mermaid-Spa-and-Bath/static/js/runtime-main.01a076fe.js.map",
     "static/css/2.fb2bbd32.chunk.css": "/The-Mermaid-Spa-and-Bath/static/css/2.fb2bbd32.chunk.css",
     "static/js/2.c1fea9da.chunk.js": "/The-Mermaid-Spa-and-Bath/static/js/2.c1fea9da.chunk.js",
     "static/js/2.c1fea9da.chunk.js.map": "/The-Mermaid-Spa-and-Bath/static/js/2.c1fea9da.chunk.js.map",
     "index.html": "/The-Mermaid-Spa-and-Bath/index.html",
-    "precache-manifest.c3ee66301ab33740b9175929f710c384.js": "/The-Mermaid-Spa-and-Bath/precache-manifest.c3ee66301ab33740b9175929f710c384.js",
+    "precache-manifest.e09af214fecb889319329485ee4463b9.js": "/The-Mermaid-Spa-and-Bath/precache-manifest.e09af214fecb889319329485ee4463b9.js",
     "service-worker.js": "/The-Mermaid-Spa-and-Bath/service-worker.js",
     "static/css/2.fb2bbd32.chunk.css.map": "/The-Mermaid-Spa-and-Bath/static/css/2.fb2bbd32.chunk.css.map",
     "static/css/main.e029fae9.chunk.css.map": "/The-Mermaid-Spa-and-Bath/static/css/main.e029fae9.chunk.css.map",
@@ -51,6 +51,6 @@
     "static/css/2.fb2bbd32.chunk.css",
     "static/js/2.c1fea9da.chunk.js",
     "static/css/main.e029fae9.chunk.css",
-    "static/js/main.7e41046b.chunk.js"
+    "static/js/main.2e8b71aa.chunk.js"
   ]
 }
