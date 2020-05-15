@@ -165,6 +165,9 @@
     .home-carousel-content{
         font-size: x-small !important;
     }
+    .home-offerings-text{
+        font-size: xx-large !important;
+    }   
 }
 
 @media(min-width: 426px){
@@ -185,9 +188,12 @@
     .home-offerings-overlay-div{
         padding-bottom: 10px;
     }
-    .home-offerings-text, .home-carousel-content{
+    .home-carousel-content{
         font-size: medium !important;
     }   
+    .home-offerings-text{
+        font-size: xx-large !important;
+    }  
 }
 
 @media(min-width: 800px){
@@ -208,7 +214,6 @@
         left: 0;
         display: flex;
     }
-    
     .home-offerings-text, .home-carousel-content{
         font-size: large !important;
     }  
