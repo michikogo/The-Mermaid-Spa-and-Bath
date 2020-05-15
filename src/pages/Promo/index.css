@@ -1,3 +1,8 @@
+.promo-content-padding{
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 40px;
+}
 .promo-background-div{
     position: relative; 
 }
@@ -7,14 +12,17 @@
     bottom: -20px;
     z-index: -1;
     width: 400px;
+    opacity: 0.5;
 }
-
 .promo-title-style{
     text-align: center;
     padding-top: 50px;
     font-size: -webkit-xxx-large;
     font-weight: 500;
     padding-bottom: 50px;
+}
+.promo-image-banner-div{
+    align-self: center;
 }
 .promo-image-banner{
     display: block;
@@ -32,4 +40,20 @@
 .promo-mechanics-content{
     padding-left: 20px;
     font-size: medium;
+}
+
+@media(max-width:425px){
+    .promo-content-padding{
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+    .promo-background-div{
+        display: none;
+    }
+}
+@media(max-width:1024px){
+    .promo-content-padding{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }
