@@ -340,7 +340,7 @@ const Reservations = props => {
                                 Treatment Type required.
                             </Form.Control.Feedback>
                             <div>
-                                <span className="reservations-link-treatments" onClick={() => window.open("http://localhost:3000/The-Mermaid-Spa-and-Bath/#/reservations-treatment-menu", "Popup", "width=580, height=600")}>
+                                <span className="reservations-link-treatments" onClick={() => window.open("https://michikogo.github.io/The-Mermaid-Spa-and-Bath/#/reservations-treatment-menu", "Popup", "width=580, height=600")}>
                                     {/* <span className="reservatioins-link-treatments" onClick={() => window.open(window.location.origin + "/treatments/", '_blank', 'toolbar=0,location=0,menubar=0')}> */}
                                     Dont know which one to pick ? Check Treatments
                                 </span>
