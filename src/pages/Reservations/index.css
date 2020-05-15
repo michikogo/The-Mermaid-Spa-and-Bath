@@ -20,6 +20,10 @@
 .reservation-card-padding{
   padding: 100px;
 }
+.reservation-contact-number{
+  -moz-appearance: "textfield";
+  border-radius: .25cm;
+}
 .reservations-link-treatments{
   color: blue;
   cursor: pointer;

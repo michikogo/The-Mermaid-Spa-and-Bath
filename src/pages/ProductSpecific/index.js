@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Col, Row, Image, InputGroup, DropdownButton, Dropdown, Button, Card, Tabs, Tab, ListGroup, Toast } from 'react-bootstrap';
@@ -46,6 +46,9 @@ const ProductSpecific = props => {
 
     const [addToCart, setAddToCart] = useState(false);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    })
     return (
         <Container fluid className="specific-product-header-padding">
             <Header />

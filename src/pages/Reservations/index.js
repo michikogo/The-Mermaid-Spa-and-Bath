@@ -63,6 +63,19 @@ const Reservations = props => {
         setInformation({ ...information, appointmentDate: schedDate })
     }
 
+    // const checkNumbers = (e) => {
+    //     if (!isNaN(e.target.value)) {
+    //         setInformation({ ...information, contact: e.target.value })
+    //         console.log("Information: " + information.contact)
+    //     } else {
+    //         return (
+    //             <Form.Control.Feedback type="invalid">
+    //                 Contact Number required.
+    //             </Form.Control.Feedback>
+    //         )
+    //     }
+    // }
+
     // Branch
     const [branch, setBranch] = useState(["Rockwell", "Podium", "SM Mega Mall", "Shangri-la Mall", "Robinsons Magnolia"]);
 
@@ -74,6 +87,7 @@ const Reservations = props => {
             console.log(props.location.state.treatment)
             console.log(information.treatment)
         }
+        window.scrollTo(0, 0)
 
         database
             .firestore()
@@ -203,9 +217,10 @@ const Reservations = props => {
                                         <InputGroup.Text id="inputGroupPrepend">+63</InputGroup.Text>
                                     </InputGroup.Prepend>
                                     <Form.Control
-                                        type="text"
+                                        type="number"
                                         onChange={(e) => setInformation({ ...information, contact: e.target.value })}
                                         required
+                                        className="reservations-contact-number"
                                     />
                                     <Form.Control.Feedback type="invalid">
                                         Contact Number required.
