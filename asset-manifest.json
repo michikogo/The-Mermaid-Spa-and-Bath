@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/The-Mermaid-Spa-and-Bath/static/css/main.d1d948c2.chunk.css",
-    "main.js": "/The-Mermaid-Spa-and-Bath/static/js/main.cdf96ef5.chunk.js",
-    "main.js.map": "/The-Mermaid-Spa-and-Bath/static/js/main.cdf96ef5.chunk.js.map",
+    "main.css": "/The-Mermaid-Spa-and-Bath/static/css/main.c12edbe4.chunk.css",
+    "main.js": "/The-Mermaid-Spa-and-Bath/static/js/main.444914e0.chunk.js",
+    "main.js.map": "/The-Mermaid-Spa-and-Bath/static/js/main.444914e0.chunk.js.map",
     "runtime-main.js": "/The-Mermaid-Spa-and-Bath/static/js/runtime-main.01a076fe.js",
     "runtime-main.js.map": "/The-Mermaid-Spa-and-Bath/static/js/runtime-main.01a076fe.js.map",
     "static/css/2.fb2bbd32.chunk.css": "/The-Mermaid-Spa-and-Bath/static/css/2.fb2bbd32.chunk.css",
     "static/js/2.bf266326.chunk.js": "/The-Mermaid-Spa-and-Bath/static/js/2.bf266326.chunk.js",
     "static/js/2.bf266326.chunk.js.map": "/The-Mermaid-Spa-and-Bath/static/js/2.bf266326.chunk.js.map",
     "index.html": "/The-Mermaid-Spa-and-Bath/index.html",
-    "precache-manifest.9125736d09bbe27b60317c7b81ae5741.js": "/The-Mermaid-Spa-and-Bath/precache-manifest.9125736d09bbe27b60317c7b81ae5741.js",
+    "precache-manifest.dd8b6de11242657deffa8cc19edc28a3.js": "/The-Mermaid-Spa-and-Bath/precache-manifest.dd8b6de11242657deffa8cc19edc28a3.js",
     "service-worker.js": "/The-Mermaid-Spa-and-Bath/service-worker.js",
     "static/css/2.fb2bbd32.chunk.css.map": "/The-Mermaid-Spa-and-Bath/static/css/2.fb2bbd32.chunk.css.map",
-    "static/css/main.d1d948c2.chunk.css.map": "/The-Mermaid-Spa-and-Bath/static/css/main.d1d948c2.chunk.css.map",
+    "static/css/main.c12edbe4.chunk.css.map": "/The-Mermaid-Spa-and-Bath/static/css/main.c12edbe4.chunk.css.map",
     "static/js/2.bf266326.chunk.js.LICENSE.txt": "/The-Mermaid-Spa-and-Bath/static/js/2.bf266326.chunk.js.LICENSE.txt",
     "static/media/about.png": "/The-Mermaid-Spa-and-Bath/static/media/about.67252437.png",
     "static/media/about2.png": "/The-Mermaid-Spa-and-Bath/static/media/about2.39c82fbf.png",
@@ -50,7 +50,7 @@
     "static/js/runtime-main.01a076fe.js",
     "static/css/2.fb2bbd32.chunk.css",
     "static/js/2.bf266326.chunk.js",
-    "static/css/main.d1d948c2.chunk.css",
-    "static/js/main.cdf96ef5.chunk.js"
+    "static/css/main.c12edbe4.chunk.css",
+    "static/js/main.444914e0.chunk.js"
   ]
 }
