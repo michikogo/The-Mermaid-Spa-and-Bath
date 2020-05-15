@@ -9,6 +9,7 @@ import ProductSpecific from './pages/ProductSpecific';
 import Treatments from './pages/Treatments';
 import Promo from './pages/Promo';
 import Reservations from './pages/Reservations';
+import TreatmentMenu from './pages/Reservations/TreatmentsReservation/TreatmentMenu.js';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       <Route path='/treatments' component={Treatments} />
       <Route path='/promo' component={Promo} />
       <Route path='/reservations' component={Reservations} />
+      <Route path='/reservations-treatment-menu' component={TreatmentMenu} />
+
 
     </HashRouter>
   );

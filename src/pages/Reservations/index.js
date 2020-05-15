@@ -7,6 +7,9 @@ import { Container, Col, Form, Image, Button, Card, InputGroup, Modal } from 're
 import { abstract8Top } from '../../image';
 import database from "../../firebase";
 
+// import Treatment from '..';
+// import TreatmentsReservationMenu from './TreatmentsReservationsMenu';
+
 import Header from '../../common/header';
 import Footer from '../../common/footer';
 
@@ -337,8 +340,9 @@ const Reservations = props => {
                                 Treatment Type required.
                             </Form.Control.Feedback>
                             <div>
-                                <span className="reservations-link-treatments" onClick={() => window.open("http://localhost:3000/The-Mermaid-Spa-and-Bath/#/treatments", "Popup", "width=580, height=600")}>
-                                    Dont know which one to pick? Check Treatments
+                                <span className="reservations-link-treatments" onClick={() => window.open("http://localhost:3000/The-Mermaid-Spa-and-Bath/#/reservations-treatment-menu", "Popup", "width=580, height=600")}>
+                                    {/* <span className="reservatioins-link-treatments" onClick={() => window.open(window.location.origin + "/treatments/", '_blank', 'toolbar=0,location=0,menubar=0')}> */}
+                                    Dont know which one to pick ? Check Treatments
                                 </span>
                             </div>
                         </Form.Group>
