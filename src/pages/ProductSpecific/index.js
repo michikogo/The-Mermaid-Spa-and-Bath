@@ -79,7 +79,7 @@ const ProductSpecific = props => {
                                         return (
                                             <div>
                                                 <Row>
-                                                    <Col md={1} lg={1} className="specific-product-emoji">
+                                                    <Col xs={4} lg={2} className="specific-product-emoji">
                                                         <span>🎉</span>
                                                     </Col>
                                                     <Col className="specific-product-benefits-div">
@@ -118,10 +118,10 @@ const ProductSpecific = props => {
                                 </div>
                             </Col>
                             {/* BUTTON TO ADD TO CART OR BUY */}
-                            <Col xs={4} lg={3} className="specific-product-add-buy">
+                            <Col xs={4} lg={5} className="specific-product-add-buy">
                                 <Button variant="success">Buy Now</Button>
                             </Col>
-                            <Col xs={4} lg={3} className="specific-product-add-buy">
+                            <Col xs={5} lg={5} className="specific-product-add-buy">
                                 <Button variant="primary" onClick={() => setAddToCart(true)}>Add to Cart</Button>
                             </Col>
                             {/* POPUP (TOAST) WHEN ADD TO CART IS CLICKED */}

@@ -88,7 +88,7 @@
     padding-top: 50px;
 }
 
-@media(max-width: 425px){
+@media(max-width: 575px){
     .specific-product-content-padding{
         padding-left: 50px !important;
         padding-right: 50px !important;
@@ -102,9 +102,9 @@
     .specific-product-desc {
         text-align: -webkit-center;
     }
-    .specific-product-emoji, .specific-product-benefits{
+    /* .specific-product-emoji, .specific-product-benefits{
         display: none;
-    }
+    } */
     .specific-product-price{
         padding-top: 0px;
     }
@@ -117,10 +117,10 @@
     }   
 }
 
-@media(max-width: 768px){
+@media(min-width: 576px){
     .specific-product-content-padding{
-        padding-left: 50px !important;
-        padding-right: 50px !important;
+        padding-left: 100px !important;
+        padding-right: 100px !important;
     }
     .specific-product-add-buy{
         padding-right: 0px;
@@ -132,10 +132,10 @@
     }
 }
 
-@media(max-width: 1024px){
+@media(min-width: 1024px){
     .specific-product-content-padding{
-        padding-left: 100px !important;
-        padding-right: 100px !important;
+        padding-left: 150px !important;
+        padding-right: 150px !important;
     }
     .specific-product-add-buy{
         padding-right: 0px;
