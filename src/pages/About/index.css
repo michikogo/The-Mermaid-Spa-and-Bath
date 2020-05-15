@@ -9,6 +9,7 @@
     width: 100%;
     position: absolute;
     z-index: -1;
+    opacity: 0.5;
 }
 .about-top-background-image{
     height: 730px;
@@ -44,25 +45,23 @@
     position: absolute;
     /* padding-top: 510px; */
     bottom: -20px;
+    opacity: 0.5;
     z-index: -1;
 }
 
-@media(max-width: 425px){
+@media(max-width: 767px){
     .about-content-padding{
         padding-left: 50px !important;
         padding-right: 50px !important;
     }
-    .about-top-background-image{
+    .about-top-background-image, .about-bottom-background-image{
         height: 300px !important;
     }
     .about-picture-sm{
         display: none;
     }
-    .about-bottom-background-image{
-        width: 300px !important;
-    }
 }
-@media(max-width: 768px){
+@media(min-width: 768px){
     .about-content-padding{
         padding-left: 100px;
         padding-right: 100px;
