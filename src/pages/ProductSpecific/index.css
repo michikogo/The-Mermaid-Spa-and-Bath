@@ -88,6 +88,19 @@
     padding-top: 50px;
 }
 
+/* MODAL */
+.specific-product-modal-contact{
+    -moz-appearance: textfield;
+}
+.specific-product-modal-buy-div{
+    text-align: -webkit-right;
+}
+.specific-product-modal-buy{
+    padding-right: 55px;
+    padding-left: 55px;
+    margin-left: 15px;
+}
+
 @media(max-width: 575px){
     .specific-product-content-padding{
         padding-left: 50px !important;

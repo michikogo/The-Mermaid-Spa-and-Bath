@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Col, Row, Image, InputGroup, DropdownButton, Dropdown, Button, Card, Tabs, Tab, ListGroup, Toast } from 'react-bootstrap';
+import { Container, Col, Row, Image, InputGroup, DropdownButton, Dropdown, Button, Card, Tabs, Tab, ListGroup, Toast, Modal, Form } from 'react-bootstrap';
 import { check, logo } from '../../image';
+
+import database from "../../firebase";
 
 import Header from '../../common/header';
 import Footer from '../../common/footer';
@@ -31,8 +33,8 @@ import Footer from '../../common/footer';
 
 const ProductSpecific = props => {
 
-    console.log("Specific Product")
-    console.log(props.location.state)
+    // console.log("Specific Product")
+    // console.log(props.location.state)
 
     // Declare a new state variable, which we'll call "count"
     const [picked, setPicked] = useState(1);
@@ -49,6 +51,42 @@ const ProductSpecific = props => {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const backProducts = () => {
+        handleClose()
+        window.location.replace("http://localhost:3000/The-Mermaid-Spa-and-Bath/#/products");
+    }
+
+    const [validated, setValidated] = useState(false);
+    const [information, setInformation] = useState({
+        lastName: '',
+        firstName: '',
+        contact: '',
+        branch: '',
+        item: props.location.state.name
+    })
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        } else {
+            backProducts()
+            database
+                .firestore()
+                .collection('sold')
+                .add({ ...information })
+            console.log("Add to Database: " + { ...information })
+        }
+        setValidated(true);
+    };
+
     return (
         <Container fluid className="specific-product-header-padding">
             <Header />
@@ -122,8 +160,79 @@ const ProductSpecific = props => {
                             </Col>
                             {/* BUTTON TO ADD TO CART OR BUY */}
                             <Col xs={4} lg={5} className="specific-product-add-buy">
-                                <Button variant="success">Buy Now</Button>
+                                <Button variant="success" onClick={handleShow}>Buy Now</Button>
                             </Col>
+                            {/* MODAL */}
+                            <Modal show={show} onHide={handleClose} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>Your Buying {information.item}</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    We will be needing your information so that we can reserve the item, that will be picked up on store.
+                                    <hr />
+                                    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                                        <Form.Row>
+                                            <Form.Group as={Col} controlId="formLastName">
+                                                <Form.Label>Last Name</Form.Label>
+                                                <Form.Control type="text"
+                                                    onChange={(e) => setInformation({ ...information, lastName: e.target.value })}
+                                                    required />
+                                                <Form.Control.Feedback type="invalid">
+                                                    Please place last name.
+                                                </Form.Control.Feedback>
+                                            </Form.Group>
+                                            <Form.Group as={Col} controlId="formFirstName">
+                                                <Form.Label>First Name</Form.Label>
+                                                <Form.Control
+                                                    type="text"
+                                                    onChange={(e) => setInformation({ ...information, firstName: e.target.value })}
+                                                    required />
+                                                <Form.Control.Feedback type="invalid">
+                                                    Please place first name.
+                                                </Form.Control.Feedback>
+                                            </Form.Group>
+                                        </Form.Row>
+                                        <Form.Group controlId="Phone Number">
+                                            <Form.Label>Phone Number</Form.Label>
+                                            <Form.Control
+                                                type="number"
+                                                onChange={(e) => setInformation({ ...information, contact: e.target.value })}
+                                                required
+                                                className="specific-product-modal-contact"
+                                            />
+                                            <Form.Control.Feedback type="invalid">
+                                                Please provide a phone number.
+                                            </Form.Control.Feedback>
+                                        </Form.Group>
+                                        <Form.Group controlId="Branch">
+                                            <Form.Label>Branch</Form.Label>
+                                            <Form.Control as="select"
+                                                onChange={(e) => setInformation({ ...information, branch: e.target.value })}
+                                                required
+                                            >
+                                                <option> </option>
+                                                <option>Rockwell</option>
+                                                <option>Podium</option>
+                                                <option>SM Mega Mall</option>
+                                                <option>Shangri-la Mall</option>
+                                                <option>Robinsons Magnolia</option>
+                                            </Form.Control>
+                                            <Form.Control.Feedback type="invalid">
+                                                Please provide a branch.
+                                            </Form.Control.Feedback>
+                                        </Form.Group>
+                                        <div className="specific-product-modal-buy-div">
+                                            <Button variant="secondary" onClick={backProducts}>
+                                                Back to Products
+                                            </Button>
+                                            <Button variant="primary" type="submit" className="specific-product-modal-buy">
+                                                Buy
+                                        </Button>
+                                        </div>
+                                    </Form>
+                                </Modal.Body>
+                            </Modal>
+
                             <Col xs={5} lg={5} className="specific-product-add-buy">
                                 <Button variant="primary" onClick={() => setAddToCart(true)}>Add to Cart</Button>
                             </Col>
@@ -136,7 +245,7 @@ const ProductSpecific = props => {
                                             <img src={logo} className="rounded mr-2 specific-product-logo" alt="" />
                                             <strong className="mr-auto">The Mermaid Spa and Bath </strong>
                                         </Toast.Header>
-                                        <Toast.Body>{props.location.state.name} is added to cart</Toast.Body>
+                                        <Toast.Body>Add to Cart is under construction 🚧👷🚧</Toast.Body>
                                     </Toast>
                                     : ''
                                 }
