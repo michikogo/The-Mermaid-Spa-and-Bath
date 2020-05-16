@@ -59,7 +59,7 @@ const ProductSpecific = props => {
 
     const backProducts = () => {
         handleClose()
-        window.location.replace("http://localhost:3000/The-Mermaid-Spa-and-Bath/#/products");
+        window.location.replace("https://michikogo.github.io/The-Mermaid-Spa-and-Bath/#/products");
     }
 
     const [validated, setValidated] = useState(false);
