@@ -30,7 +30,7 @@ Reservations | Form for reserving the placing into firebase | React Hook, Fireba
 
 ## Road Map
 Features that should be added/ for improvement are:
-- [ ] https://img.shields.io/badge/-ADD-red Users can Login
+- [ ] https://img.shields.io/static/v1?message=ADD&color=red Users can Login
 - [ ] https://img.shields.io/badge/-ADD-red Users can create profile
 - [ ] https://img.shields.io/badge/-ADD-red Users can check their reservations
 - [ ] https://img.shields.io/badge/-FIX-orange Specific Product page refresh shouldn't be blank
