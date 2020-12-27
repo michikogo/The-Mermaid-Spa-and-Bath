@@ -18,8 +18,7 @@ This project was made with `react hooks`, `react native`, `firebase`, and `react
    ```
 
 ## Webpages
-There are seven webpages that were created namely:
-Webpages | Description | Libraries
+Webpage | Description | Libraries
 | :---: | :---: | :---:
 Home | Shows featured services, about us, products, and reservations |  React Native
 About Us | Describes the sample company | React Native
@@ -28,3 +27,14 @@ Specific Product | When `products page` is clicked it will be redirected to this
 Treatments | Shows all treatments offered by company the list is pulled from `firebase`  | React Hooks, Firebase
 Promo | Shows the promo of the company | React Hook
 Reservations | Form for reserving the placing into firebase | React Hook, Firebase, React Datepicker
+
+## Road Map
+Features that should be added/ for improvement are:
+- [ ] Users can Login
+- [ ] Users can create profile
+- [ ] Users can check their reservations
+- [ ] Specific Product page refresh shouldn't be blank
+- [ ] Admin/ Staff can see request from users
+
+## Project Status
+This project is on Hiatus, there are still bugs, fixes, changes and improvements that should be done.
