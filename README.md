@@ -16,6 +16,10 @@ This project was made with `react hooks`, `react native`, `firebase`, and `react
    ```bash
    npm start
    ```
+## Branches
+- master - final project
+- backup-master - inital project
+- ghpages - excecuting in github pages
 
 ## Webpages
 Webpage | Description | Libraries
